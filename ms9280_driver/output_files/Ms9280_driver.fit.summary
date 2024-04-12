@@ -1,0 +1,16 @@
+Fitter Status : Successful - Fri Apr 12 21:15:34 2024
+Quartus II 64-Bit Version : 13.0.0 Build 156 04/24/2013 SJ Full Version
+Revision Name : Ms9280_driver
+Top-level Entity Name : Ms9280_driver
+Family : Cyclone IV E
+Device : EP4CE10F17C8
+Timing Models : Final
+Total logic elements : 672 / 10,320 ( 7 % )
+    Total combinational functions : 415 / 10,320 ( 4 % )
+    Dedicated logic registers : 524 / 10,320 ( 5 % )
+Total registers : 524
+Total pins : 18 / 180 ( 10 % )
+Total virtual pins : 0
+Total memory bits : 131,072 / 423,936 ( 31 % )
+Embedded Multiplier 9-bit elements : 0 / 46 ( 0 % )
+Total PLLs : 0 / 2 ( 0 % )

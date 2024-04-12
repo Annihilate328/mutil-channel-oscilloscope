@@ -1,0 +1,14 @@
+Analysis & Synthesis Status : Successful - Fri Apr 12 21:15:28 2024
+Quartus II 64-Bit Version : 13.0.0 Build 156 04/24/2013 SJ Full Version
+Revision Name : Ms9280_driver
+Top-level Entity Name : Ms9280_driver
+Family : Cyclone IV E
+Total logic elements : 684
+    Total combinational functions : 414
+    Dedicated logic registers : 524
+Total registers : 524
+Total pins : 18
+Total virtual pins : 0
+Total memory bits : 131,072
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 0

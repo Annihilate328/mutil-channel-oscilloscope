@@ -1,0 +1,29 @@
+|Ms9280_driver
+Clk => out_data[0]~reg0.CLK
+Clk => out_data[1]~reg0.CLK
+Clk => out_data[2]~reg0.CLK
+Clk => out_data[3]~reg0.CLK
+Clk => out_data[4]~reg0.CLK
+Clk => out_data[5]~reg0.CLK
+Clk => out_data[6]~reg0.CLK
+Clk => out_data[7]~reg0.CLK
+Clk => AD_Clk.DATAIN
+AD_Clk <= Clk.DB_MAX_OUTPUT_PORT_TYPE
+out_data[0] <= out_data[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+out_data[1] <= out_data[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+out_data[2] <= out_data[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+out_data[3] <= out_data[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+out_data[4] <= out_data[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+out_data[5] <= out_data[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+out_data[6] <= out_data[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+out_data[7] <= out_data[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+AD_Data[0] => out_data[0]~reg0.DATAIN
+AD_Data[1] => out_data[1]~reg0.DATAIN
+AD_Data[2] => out_data[2]~reg0.DATAIN
+AD_Data[3] => out_data[3]~reg0.DATAIN
+AD_Data[4] => out_data[4]~reg0.DATAIN
+AD_Data[5] => out_data[5]~reg0.DATAIN
+AD_Data[6] => out_data[6]~reg0.DATAIN
+AD_Data[7] => out_data[7]~reg0.DATAIN
+
+

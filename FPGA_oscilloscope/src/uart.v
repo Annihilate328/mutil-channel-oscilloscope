@@ -5,7 +5,6 @@ module Uart(
 	send_en,
 	uart_tx,
 	tx_done,
-	Led
 );
 	input Clk;
 	input Reset_n;
