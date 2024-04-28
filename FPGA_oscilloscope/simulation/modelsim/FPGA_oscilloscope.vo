@@ -1,0 +1,198 @@
+// Copyright (C) 1991-2013 Altera Corporation
+// Your use of Altera Corporation's design tools, logic functions 
+// and other software and tools, and its AMPP partner logic 
+// functions, and any output files from any of the foregoing 
+// (including device programming or simulation files), and any 
+// associated documentation or information are expressly subject 
+// to the terms and conditions of the Altera Program License 
+// Subscription Agreement, Altera MegaCore Function License 
+// Agreement, or other applicable license agreement, including, 
+// without limitation, that your use is for the sole purpose of 
+// programming logic devices manufactured by Altera and sold by 
+// Altera or its authorized distributors.  Please refer to the 
+// applicable agreement for further details.
+
+// VENDOR "Altera"
+// PROGRAM "Quartus II 64-Bit"
+// VERSION "Version 13.0.0 Build 156 04/24/2013 SJ Full Version"
+
+// DATE "04/28/2024 16:51:20"
+
+// 
+// Device: Altera EP4CE10F17C8 Package FBGA256
+// 
+
+// 
+// This Verilog file should be used for ModelSim-Altera (Verilog) only
+// 
+
+`timescale 1 ps/ 1 ps
+
+module FPGA_oscilloscope (
+	Clk,
+	Reset_n,
+	AD_Clk,
+	AD_Data);
+input 	Clk;
+input 	Reset_n;
+output 	AD_Clk;
+input 	[7:0] AD_Data;
+
+// Design Ports Information
+// Reset_n	=>  Location: PIN_G5,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// AD_Clk	=>  Location: PIN_G1,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// AD_Data[0]	=>  Location: PIN_R12,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// AD_Data[1]	=>  Location: PIN_J13,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// AD_Data[2]	=>  Location: PIN_K10,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// AD_Data[3]	=>  Location: PIN_R5,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// AD_Data[4]	=>  Location: PIN_A2,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// AD_Data[5]	=>  Location: PIN_L8,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// AD_Data[6]	=>  Location: PIN_L1,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// AD_Data[7]	=>  Location: PIN_E6,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// Clk	=>  Location: PIN_G2,	 I/O Standard: 2.5 V,	 Current Strength: Default
+
+
+wire gnd;
+wire vcc;
+wire unknown;
+
+assign gnd = 1'b0;
+assign vcc = 1'b1;
+assign unknown = 1'bx;
+
+tri1 devclrn;
+tri1 devpor;
+tri1 devoe;
+// synopsys translate_off
+initial $sdf_annotate("FPGA_oscilloscope_v.sdo");
+// synopsys translate_on
+
+wire \Reset_n~input_o ;
+wire \AD_Data[0]~input_o ;
+wire \AD_Data[1]~input_o ;
+wire \AD_Data[2]~input_o ;
+wire \AD_Data[3]~input_o ;
+wire \AD_Data[4]~input_o ;
+wire \AD_Data[5]~input_o ;
+wire \AD_Data[6]~input_o ;
+wire \AD_Data[7]~input_o ;
+wire \AD_Clk~output_o ;
+wire \Clk~input_o ;
+
+
+// Location: IOOBUF_X0_Y18_N23
+cycloneive_io_obuf \AD_Clk~output (
+	.i(\Clk~input_o ),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\AD_Clk~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \AD_Clk~output .bus_hold = "false";
+defparam \AD_Clk~output .open_drain_output = "false";
+// synopsys translate_on
+
+// Location: IOIBUF_X0_Y18_N15
+cycloneive_io_ibuf \Clk~input (
+	.i(Clk),
+	.ibar(gnd),
+	.o(\Clk~input_o ));
+// synopsys translate_off
+defparam \Clk~input .bus_hold = "false";
+defparam \Clk~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// Location: IOIBUF_X0_Y19_N1
+cycloneive_io_ibuf \Reset_n~input (
+	.i(Reset_n),
+	.ibar(gnd),
+	.o(\Reset_n~input_o ));
+// synopsys translate_off
+defparam \Reset_n~input .bus_hold = "false";
+defparam \Reset_n~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// Location: IOIBUF_X23_Y0_N1
+cycloneive_io_ibuf \AD_Data[0]~input (
+	.i(AD_Data[0]),
+	.ibar(gnd),
+	.o(\AD_Data[0]~input_o ));
+// synopsys translate_off
+defparam \AD_Data[0]~input .bus_hold = "false";
+defparam \AD_Data[0]~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// Location: IOIBUF_X34_Y11_N1
+cycloneive_io_ibuf \AD_Data[1]~input (
+	.i(AD_Data[1]),
+	.ibar(gnd),
+	.o(\AD_Data[1]~input_o ));
+// synopsys translate_off
+defparam \AD_Data[1]~input .bus_hold = "false";
+defparam \AD_Data[1]~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// Location: IOIBUF_X25_Y0_N15
+cycloneive_io_ibuf \AD_Data[2]~input (
+	.i(AD_Data[2]),
+	.ibar(gnd),
+	.o(\AD_Data[2]~input_o ));
+// synopsys translate_off
+defparam \AD_Data[2]~input .bus_hold = "false";
+defparam \AD_Data[2]~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// Location: IOIBUF_X9_Y0_N8
+cycloneive_io_ibuf \AD_Data[3]~input (
+	.i(AD_Data[3]),
+	.ibar(gnd),
+	.o(\AD_Data[3]~input_o ));
+// synopsys translate_off
+defparam \AD_Data[3]~input .bus_hold = "false";
+defparam \AD_Data[3]~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// Location: IOIBUF_X5_Y24_N1
+cycloneive_io_ibuf \AD_Data[4]~input (
+	.i(AD_Data[4]),
+	.ibar(gnd),
+	.o(\AD_Data[4]~input_o ));
+// synopsys translate_off
+defparam \AD_Data[4]~input .bus_hold = "false";
+defparam \AD_Data[4]~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// Location: IOIBUF_X13_Y0_N15
+cycloneive_io_ibuf \AD_Data[5]~input (
+	.i(AD_Data[5]),
+	.ibar(gnd),
+	.o(\AD_Data[5]~input_o ));
+// synopsys translate_off
+defparam \AD_Data[5]~input .bus_hold = "false";
+defparam \AD_Data[5]~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// Location: IOIBUF_X0_Y8_N22
+cycloneive_io_ibuf \AD_Data[6]~input (
+	.i(AD_Data[6]),
+	.ibar(gnd),
+	.o(\AD_Data[6]~input_o ));
+// synopsys translate_off
+defparam \AD_Data[6]~input .bus_hold = "false";
+defparam \AD_Data[6]~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// Location: IOIBUF_X7_Y24_N8
+cycloneive_io_ibuf \AD_Data[7]~input (
+	.i(AD_Data[7]),
+	.ibar(gnd),
+	.o(\AD_Data[7]~input_o ));
+// synopsys translate_off
+defparam \AD_Data[7]~input .bus_hold = "false";
+defparam \AD_Data[7]~input .simulate_z_as = "z";
+// synopsys translate_on
+
+assign AD_Clk = \AD_Clk~output_o ;
+
+endmodule

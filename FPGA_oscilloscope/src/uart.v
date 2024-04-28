@@ -11,7 +11,6 @@ module Uart(
 	input [7:0] Data;
 	input send_en;
 	output reg uart_tx;
-	output reg Led;
 	output reg tx_done;
 	
 	parameter CLOCK_FREQ = 50_000_000;

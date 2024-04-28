@@ -1,5 +1,5 @@
 Flow report for FPGA_oscilloscope
-Thu Apr 11 21:38:36 2024
+Sun Apr 28 21:17:23 2024
 Quartus II 64-Bit Version 13.0.0 Build 156 04/24/2013 SJ Full Version
 
 
@@ -40,22 +40,22 @@ applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Flow Summary                                                                     ;
 +------------------------------------+---------------------------------------------+
-; Flow Status                        ; Successful - Thu Apr 11 21:38:36 2024       ;
+; Flow Status                        ; Flow Failed - Sun Apr 28 21:17:23 2024      ;
 ; Quartus II 64-Bit Version          ; 13.0.0 Build 156 04/24/2013 SJ Full Version ;
 ; Revision Name                      ; FPGA_oscilloscope                           ;
 ; Top-level Entity Name              ; FPGA_oscilloscope                           ;
 ; Family                             ; Cyclone IV E                                ;
 ; Device                             ; EP4CE10F17C8                                ;
 ; Timing Models                      ; Final                                       ;
-; Total logic elements               ; 1                                           ;
-;     Total combinational functions  ; 0                                           ;
-;     Dedicated logic registers      ; 1                                           ;
-; Total registers                    ; 1                                           ;
-; Total pins                         ; 12                                          ;
-; Total virtual pins                 ; 0                                           ;
-; Total memory bits                  ; 0                                           ;
-; Embedded Multiplier 9-bit elements ; 0                                           ;
-; Total PLLs                         ; 0                                           ;
+; Total logic elements               ; N/A until Partition Merge                   ;
+;     Total combinational functions  ; N/A until Partition Merge                   ;
+;     Dedicated logic registers      ; N/A until Partition Merge                   ;
+; Total registers                    ; N/A until Partition Merge                   ;
+; Total pins                         ; N/A until Partition Merge                   ;
+; Total virtual pins                 ; N/A until Partition Merge                   ;
+; Total memory bits                  ; N/A until Partition Merge                   ;
+; Embedded Multiplier 9-bit elements ; N/A until Partition Merge                   ;
+; Total PLLs                         ; N/A until Partition Merge                   ;
 +------------------------------------+---------------------------------------------+
 
 
@@ -64,7 +64,7 @@ applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 04/11/2024 21:38:35 ;
+; Start date & time ; 04/28/2024 21:17:23 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; FPGA_oscilloscope   ;
 +-------------------+---------------------+
@@ -75,11 +75,14 @@ applicable agreement for further details.
 +-------------------------------------+--------------------------------+---------------+-------------+----------------+
 ; Assignment Name                     ; Value                          ; Default Value ; Entity Name ; Section Id     ;
 +-------------------------------------+--------------------------------+---------------+-------------+----------------+
-; COMPILER_SIGNATURE_ID               ; 92384127978119.171284271528980 ; --            ; --          ; --             ;
+; COMPILER_SIGNATURE_ID               ; 92384127978119.171431024317740 ; --            ; --          ; --             ;
 ; EDA_OUTPUT_DATA_FORMAT              ; Verilog Hdl                    ; --            ; --          ; eda_simulation ;
 ; EDA_SIMULATION_TOOL                 ; ModelSim-Altera (Verilog)      ; <None>        ; --          ; --             ;
+; IP_TOOL_NAME                        ; FIFO                           ; --            ; --          ; --             ;
+; IP_TOOL_VERSION                     ; 13.0                           ; --            ; --          ; --             ;
 ; MAX_CORE_JUNCTION_TEMP              ; 85                             ; --            ; --          ; --             ;
 ; MIN_CORE_JUNCTION_TEMP              ; 0                              ; --            ; --          ; --             ;
+; MISC_FILE                           ; IP/ADC0_FIFO_inst.v            ; --            ; --          ; --             ;
 ; NOMINAL_CORE_SUPPLY_VOLTAGE         ; 1.2V                           ; --            ; --          ; --             ;
 ; PARTITION_COLOR                     ; 16764057                       ; --            ; --          ; Top            ;
 ; PARTITION_FITTER_PRESERVATION_LEVEL ; PLACEMENT_AND_ROUTING          ; --            ; --          ; Top            ;
@@ -93,8 +96,8 @@ applicable agreement for further details.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:01     ; 1.0                     ; 4628 MB             ; 00:00:00                           ;
-; Total                ; 00:00:01     ; --                      ; --                  ; 00:00:00                           ;
+; Analysis & Synthesis ; 00:00:00     ; 1.0                     ; 4569 MB             ; 00:00:00                           ;
+; Total                ; 00:00:00     ; --                      ; --                  ; 00:00:00                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
