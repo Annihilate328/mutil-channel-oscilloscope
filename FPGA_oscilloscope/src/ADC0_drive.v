@@ -37,5 +37,10 @@ module ADC0_drive(
 	);
 	
 	always@(posedge ADC0_Clk or negedge Reset_n)
-		AD_Data <= Data;
+		Data <= Data;
+	always@(posedge ADC0_Clk or negedge Reset_n)
+		if(！full or !almost_full)begin
+			wrreg <= 1;
+			
+		end
 endmodule
