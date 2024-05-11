@@ -16,7 +16,7 @@
 // PROGRAM "Quartus II 64-Bit"
 // VERSION "Version 13.0.0 Build 156 04/24/2013 SJ Full Version"
 
-// DATE "04/28/2024 16:51:19"
+// DATE "05/11/2024 16:10:36"
 
 // 
 // Device: Altera EP4CE10F17C8 Package FBGA256
@@ -29,27 +29,41 @@
 `timescale 1 ps/ 1 ps
 
 module FPGA_oscilloscope (
+	ADC0_bg,
 	Clk,
+	ADC0_Clk,
 	Reset_n,
-	AD_Clk,
-	AD_Data);
+	F_O_ADC0_Data,
+	ADC0_rdreq,
+	ADC0_almost_empty,
+	ADC0_empty,
+	ADC0_sclr,
+	ADC0_Trigger_lever,
+	Trigger_lever);
+output 	ADC0_bg;
 input 	Clk;
+output 	ADC0_Clk;
 input 	Reset_n;
-output 	AD_Clk;
-input 	[7:0] AD_Data;
+input 	F_O_ADC0_Data;
+output 	ADC0_rdreq;
+input 	ADC0_almost_empty;
+input 	ADC0_empty;
+output 	ADC0_sclr;
+output 	ADC0_Trigger_lever;
+input 	Trigger_lever;
 
 // Design Ports Information
-// Reset_n	=>  Location: PIN_G5,	 I/O Standard: 2.5 V,	 Current Strength: Default
-// AD_Clk	=>  Location: PIN_G1,	 I/O Standard: 2.5 V,	 Current Strength: Default
-// AD_Data[0]	=>  Location: PIN_R12,	 I/O Standard: 2.5 V,	 Current Strength: Default
-// AD_Data[1]	=>  Location: PIN_J13,	 I/O Standard: 2.5 V,	 Current Strength: Default
-// AD_Data[2]	=>  Location: PIN_K10,	 I/O Standard: 2.5 V,	 Current Strength: Default
-// AD_Data[3]	=>  Location: PIN_R5,	 I/O Standard: 2.5 V,	 Current Strength: Default
-// AD_Data[4]	=>  Location: PIN_A2,	 I/O Standard: 2.5 V,	 Current Strength: Default
-// AD_Data[5]	=>  Location: PIN_L8,	 I/O Standard: 2.5 V,	 Current Strength: Default
-// AD_Data[6]	=>  Location: PIN_L1,	 I/O Standard: 2.5 V,	 Current Strength: Default
-// AD_Data[7]	=>  Location: PIN_E6,	 I/O Standard: 2.5 V,	 Current Strength: Default
-// Clk	=>  Location: PIN_G2,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// ADC0_bg	=>  Location: PIN_J15,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// Clk	=>  Location: PIN_N16,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// ADC0_Clk	=>  Location: PIN_A14,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// Reset_n	=>  Location: PIN_N11,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// F_O_ADC0_Data	=>  Location: PIN_A7,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// ADC0_rdreq	=>  Location: PIN_F5,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// ADC0_almost_empty	=>  Location: PIN_J2,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// ADC0_empty	=>  Location: PIN_C2,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// ADC0_sclr	=>  Location: PIN_A12,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// ADC0_Trigger_lever	=>  Location: PIN_G1,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// Trigger_lever	=>  Location: PIN_D1,	 I/O Standard: 2.5 V,	 Current Strength: Default
 
 
 wire gnd;
@@ -67,33 +81,85 @@ tri1 devoe;
 initial $sdf_annotate("FPGA_oscilloscope_8_1200mv_85c_v_slow.sdo");
 // synopsys translate_on
 
-wire \Reset_n~input_o ;
-wire \AD_Data[0]~input_o ;
-wire \AD_Data[1]~input_o ;
-wire \AD_Data[2]~input_o ;
-wire \AD_Data[3]~input_o ;
-wire \AD_Data[4]~input_o ;
-wire \AD_Data[5]~input_o ;
-wire \AD_Data[6]~input_o ;
-wire \AD_Data[7]~input_o ;
-wire \AD_Clk~output_o ;
 wire \Clk~input_o ;
+wire \Reset_n~input_o ;
+wire \F_O_ADC0_Data~input_o ;
+wire \ADC0_almost_empty~input_o ;
+wire \ADC0_empty~input_o ;
+wire \Trigger_lever~input_o ;
+wire \ADC0_bg~output_o ;
+wire \ADC0_Clk~output_o ;
+wire \ADC0_rdreq~output_o ;
+wire \ADC0_sclr~output_o ;
+wire \ADC0_Trigger_lever~output_o ;
 
 
-// Location: IOOBUF_X0_Y18_N23
-cycloneive_io_obuf \AD_Clk~output (
-	.i(\Clk~input_o ),
+// Location: IOOBUF_X34_Y10_N9
+cycloneive_io_obuf \ADC0_bg~output (
+	.i(gnd),
 	.oe(vcc),
 	.seriesterminationcontrol(16'b0000000000000000),
 	.devoe(devoe),
-	.o(\AD_Clk~output_o ),
+	.o(\ADC0_bg~output_o ),
 	.obar());
 // synopsys translate_off
-defparam \AD_Clk~output .bus_hold = "false";
-defparam \AD_Clk~output .open_drain_output = "false";
+defparam \ADC0_bg~output .bus_hold = "false";
+defparam \ADC0_bg~output .open_drain_output = "false";
 // synopsys translate_on
 
-// Location: IOIBUF_X0_Y18_N15
+// Location: IOOBUF_X28_Y24_N2
+cycloneive_io_obuf \ADC0_Clk~output (
+	.i(gnd),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\ADC0_Clk~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \ADC0_Clk~output .bus_hold = "false";
+defparam \ADC0_Clk~output .open_drain_output = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X0_Y23_N16
+cycloneive_io_obuf \ADC0_rdreq~output (
+	.i(gnd),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\ADC0_rdreq~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \ADC0_rdreq~output .bus_hold = "false";
+defparam \ADC0_rdreq~output .open_drain_output = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X25_Y24_N2
+cycloneive_io_obuf \ADC0_sclr~output (
+	.i(gnd),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\ADC0_sclr~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \ADC0_sclr~output .bus_hold = "false";
+defparam \ADC0_sclr~output .open_drain_output = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X0_Y18_N23
+cycloneive_io_obuf \ADC0_Trigger_lever~output (
+	.i(gnd),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\ADC0_Trigger_lever~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \ADC0_Trigger_lever~output .bus_hold = "false";
+defparam \ADC0_Trigger_lever~output .open_drain_output = "false";
+// synopsys translate_on
+
+// Location: IOIBUF_X34_Y7_N22
 cycloneive_io_ibuf \Clk~input (
 	.i(Clk),
 	.ibar(gnd),
@@ -103,7 +169,7 @@ defparam \Clk~input .bus_hold = "false";
 defparam \Clk~input .simulate_z_as = "z";
 // synopsys translate_on
 
-// Location: IOIBUF_X0_Y19_N1
+// Location: IOIBUF_X30_Y0_N22
 cycloneive_io_ibuf \Reset_n~input (
 	.i(Reset_n),
 	.ibar(gnd),
@@ -113,86 +179,54 @@ defparam \Reset_n~input .bus_hold = "false";
 defparam \Reset_n~input .simulate_z_as = "z";
 // synopsys translate_on
 
-// Location: IOIBUF_X23_Y0_N1
-cycloneive_io_ibuf \AD_Data[0]~input (
-	.i(AD_Data[0]),
+// Location: IOIBUF_X11_Y24_N1
+cycloneive_io_ibuf \F_O_ADC0_Data~input (
+	.i(F_O_ADC0_Data),
 	.ibar(gnd),
-	.o(\AD_Data[0]~input_o ));
+	.o(\F_O_ADC0_Data~input_o ));
 // synopsys translate_off
-defparam \AD_Data[0]~input .bus_hold = "false";
-defparam \AD_Data[0]~input .simulate_z_as = "z";
+defparam \F_O_ADC0_Data~input .bus_hold = "false";
+defparam \F_O_ADC0_Data~input .simulate_z_as = "z";
 // synopsys translate_on
 
-// Location: IOIBUF_X34_Y11_N1
-cycloneive_io_ibuf \AD_Data[1]~input (
-	.i(AD_Data[1]),
+// Location: IOIBUF_X0_Y10_N1
+cycloneive_io_ibuf \ADC0_almost_empty~input (
+	.i(ADC0_almost_empty),
 	.ibar(gnd),
-	.o(\AD_Data[1]~input_o ));
+	.o(\ADC0_almost_empty~input_o ));
 // synopsys translate_off
-defparam \AD_Data[1]~input .bus_hold = "false";
-defparam \AD_Data[1]~input .simulate_z_as = "z";
+defparam \ADC0_almost_empty~input .bus_hold = "false";
+defparam \ADC0_almost_empty~input .simulate_z_as = "z";
 // synopsys translate_on
 
-// Location: IOIBUF_X25_Y0_N15
-cycloneive_io_ibuf \AD_Data[2]~input (
-	.i(AD_Data[2]),
+// Location: IOIBUF_X0_Y22_N15
+cycloneive_io_ibuf \ADC0_empty~input (
+	.i(ADC0_empty),
 	.ibar(gnd),
-	.o(\AD_Data[2]~input_o ));
+	.o(\ADC0_empty~input_o ));
 // synopsys translate_off
-defparam \AD_Data[2]~input .bus_hold = "false";
-defparam \AD_Data[2]~input .simulate_z_as = "z";
+defparam \ADC0_empty~input .bus_hold = "false";
+defparam \ADC0_empty~input .simulate_z_as = "z";
 // synopsys translate_on
 
-// Location: IOIBUF_X9_Y0_N8
-cycloneive_io_ibuf \AD_Data[3]~input (
-	.i(AD_Data[3]),
+// Location: IOIBUF_X0_Y21_N22
+cycloneive_io_ibuf \Trigger_lever~input (
+	.i(Trigger_lever),
 	.ibar(gnd),
-	.o(\AD_Data[3]~input_o ));
+	.o(\Trigger_lever~input_o ));
 // synopsys translate_off
-defparam \AD_Data[3]~input .bus_hold = "false";
-defparam \AD_Data[3]~input .simulate_z_as = "z";
+defparam \Trigger_lever~input .bus_hold = "false";
+defparam \Trigger_lever~input .simulate_z_as = "z";
 // synopsys translate_on
 
-// Location: IOIBUF_X5_Y24_N1
-cycloneive_io_ibuf \AD_Data[4]~input (
-	.i(AD_Data[4]),
-	.ibar(gnd),
-	.o(\AD_Data[4]~input_o ));
-// synopsys translate_off
-defparam \AD_Data[4]~input .bus_hold = "false";
-defparam \AD_Data[4]~input .simulate_z_as = "z";
-// synopsys translate_on
+assign ADC0_bg = \ADC0_bg~output_o ;
 
-// Location: IOIBUF_X13_Y0_N15
-cycloneive_io_ibuf \AD_Data[5]~input (
-	.i(AD_Data[5]),
-	.ibar(gnd),
-	.o(\AD_Data[5]~input_o ));
-// synopsys translate_off
-defparam \AD_Data[5]~input .bus_hold = "false";
-defparam \AD_Data[5]~input .simulate_z_as = "z";
-// synopsys translate_on
+assign ADC0_Clk = \ADC0_Clk~output_o ;
 
-// Location: IOIBUF_X0_Y8_N22
-cycloneive_io_ibuf \AD_Data[6]~input (
-	.i(AD_Data[6]),
-	.ibar(gnd),
-	.o(\AD_Data[6]~input_o ));
-// synopsys translate_off
-defparam \AD_Data[6]~input .bus_hold = "false";
-defparam \AD_Data[6]~input .simulate_z_as = "z";
-// synopsys translate_on
+assign ADC0_rdreq = \ADC0_rdreq~output_o ;
 
-// Location: IOIBUF_X7_Y24_N8
-cycloneive_io_ibuf \AD_Data[7]~input (
-	.i(AD_Data[7]),
-	.ibar(gnd),
-	.o(\AD_Data[7]~input_o ));
-// synopsys translate_off
-defparam \AD_Data[7]~input .bus_hold = "false";
-defparam \AD_Data[7]~input .simulate_z_as = "z";
-// synopsys translate_on
+assign ADC0_sclr = \ADC0_sclr~output_o ;
 
-assign AD_Clk = \AD_Clk~output_o ;
+assign ADC0_Trigger_lever = \ADC0_Trigger_lever~output_o ;
 
 endmodule

@@ -1,5 +1,6 @@
 <?xml version="1.0" ?>
 <LOG_ROOT>
 	<PROJECT NAME="FPGA_oscilloscope">
+		<CBX_INST_ENTRY INSTANCE_NAME="|FPGA_oscilloscope|ADC0_drive:ADC0_drive|ADC0_FIFO:ADC0_FIFO|scfifo:scfifo_component" CBX_FILE_NAME="scfifo_0da1.tdf"/>
 	</PROJECT>
 </LOG_ROOT>

@@ -29,30 +29,21 @@
 (DELAYFILE
   (SDFVERSION "2.1")
   (DESIGN "FPGA_oscilloscope")
-  (DATE "04/28/2024 16:51:20")
+  (DATE "05/11/2024 16:10:36")
   (VENDOR "Altera")
   (PROGRAM "Quartus II 64-Bit")
   (VERSION "Version 13.0.0 Build 156 04/24/2013 SJ Full Version")
   (DIVIDER .)
   (TIMESCALE 1 ps)
 
+	// No Timing Cells with timing info are found in the compiled design. A dummy “dff” Timing Cell is created.
   (CELL
-    (CELLTYPE "cycloneive_io_obuf")
-    (INSTANCE AD_Clk\~output)
-    (DELAY
-      (ABSOLUTE
-        (PORT i (3140:3140:3140) (3117:3117:3117))
-        (IOPATH i o (2800:2800:2800) (2762:2762:2762))
-      )
-    )
+    (CELLTYPE "dff")
+    (INSTANCE * )
   )
+	// No Timing Cells with timing info are found in the compiled design. A dummy “dff” Timing Cell is created.
   (CELL
-    (CELLTYPE "cycloneive_io_ibuf")
-    (INSTANCE Clk\~input)
-    (DELAY
-      (ABSOLUTE
-        (IOPATH i o (728:728:728) (753:753:753))
-      )
-    )
+    (CELLTYPE "dff")
+    (INSTANCE * )
   )
 )
