@@ -1,0 +1,26 @@
+m255
+K3
+13
+cModel Technology
+Z0 dE:\Graduation Design\mutil-channel-oscilloscope\FPGA_oscilloscope\simulation\modelsim
+vUart
+!i10b 1
+!s100 KH>WJWeA@f=@Rfhc2SEKd0
+IhVXzN0QX2`3[?f<K3K_nM0
+Veda>iL3[oh2E?RoTo1cc;1
+Z1 dE:\Graduation Design\mutil-channel-oscilloscope\FPGA_oscilloscope\simulation\modelsim
+w1715695473
+8E:/Graduation Design/mutil-channel-oscilloscope/FPGA_oscilloscope/src/uart.v
+FE:/Graduation Design/mutil-channel-oscilloscope/FPGA_oscilloscope/src/uart.v
+L0 1
+OV;L;10.1d;51
+r1
+!s85 0
+31
+!s108 1715706914.451000
+!s107 E:/Graduation Design/mutil-channel-oscilloscope/FPGA_oscilloscope/src/uart.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+E:/Graduation Design/mutil-channel-oscilloscope/FPGA_oscilloscope/src|E:/Graduation Design/mutil-channel-oscilloscope/FPGA_oscilloscope/src/uart.v|
+!s101 -O0
+o-vlog01compat -work work -O0
+!s92 -vlog01compat -work work {+incdir+E:/Graduation Design/mutil-channel-oscilloscope/FPGA_oscilloscope/src} -O0
+n@uart

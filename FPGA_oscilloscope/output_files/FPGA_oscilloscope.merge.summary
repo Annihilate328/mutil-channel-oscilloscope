@@ -1,0 +1,14 @@
+Partition Merge Status : Successful - Tue May 14 23:55:52 2024
+Quartus II 64-Bit Version : 13.0.0 Build 156 04/24/2013 SJ Full Version
+Revision Name : FPGA_oscilloscope
+Top-level Entity Name : FPGA_oscilloscope
+Family : Cyclone IV E
+Total logic elements : 981 / 10,320 ( 10 % )
+    Total combinational functions : 559 / 10,320 ( 5 % )
+    Dedicated logic registers : 736 / 10,320 ( 7 % )
+Total registers : 736
+Total pins : 12 / 180 ( 7 % )
+Total virtual pins : 0
+Total memory bits : 11,392 / 423,936 ( 3 % )
+Embedded Multiplier 9-bit elements : 0 / 46 ( 0 % )
+Total PLLs : 0 / 2 ( 0 % )

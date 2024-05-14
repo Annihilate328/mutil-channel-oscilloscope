@@ -1,93 +1,100 @@
 module Uart(
-	Clk,
-	Reset_n,
-	Data,
-	send_en,
-	uart_tx,
-	tx_done,
+    input wire Clk,
+    input wire Reset_n,
+    input wire [7:0] Data,
+    input wire send_en,
+    output reg uart_tx,
+    output reg tx_done
 );
-	input Clk;
-	input Reset_n;
-	input [7:0] Data;
-	input send_en;
-	output reg uart_tx;
-	output reg tx_done;
-	
-	parameter CLOCK_FREQ = 50_000_000;
-	parameter BAUD = 9600;
-	parameter MCNT_BIT = 10 - 1;
-	parameter MCNT_BAUD =CLOCK_FREQ/BAUD - 1;
-	
-	//波特率计数器
-	//1/9600*1_000_000_000/20-1
-	
-	reg [29:0] baud_div_cnt; 
-	reg en_baud_cnt;
-	reg [3:0] bit_cnt;
-	reg [7:0] r_Data;
-	
-	always@(posedge Clk or negedge Reset_n)
-		if(!Reset_n)
-			en_baud_cnt <= 0;
-		else if(send_en)
-			en_baud_cnt <= 1;
-		else if(w_tx_done)
-			en_baud_cnt <= 0;
-	
-	always@(posedge Clk or negedge Reset_n)
-		if(!Reset_n)
-			baud_div_cnt <= 0;
-		else if (en_baud_cnt) begin
-			if(baud_div_cnt == MCNT_BAUD)
-				baud_div_cnt <= 0;
-			else 
-				baud_div_cnt <= baud_div_cnt + 1'd1;
-		end
-		else 
-			baud_div_cnt <= 0;
-			
-	//位计数器
-	always@(posedge Clk or negedge Reset_n)
-		if(!Reset_n)
-			bit_cnt <= 0;
-		else if(baud_div_cnt == MCNT_BAUD ) begin
-			if(bit_cnt == MCNT_BIT)
-				bit_cnt <= 0;
-			else
-				bit_cnt <= bit_cnt + 1'd1;
-		end
-	//位发送逻辑
-	always@(posedge Clk or negedge Reset_n)
-		if(!Reset_n)
-			r_Data <= 0;
-		else if(send_en)
-			r_Data <= Data;
-	
-	always@(posedge Clk or negedge Reset_n)
-		if(!Reset_n)
-			uart_tx <= 1;
-		else begin
-			case(bit_cnt)
-				0:uart_tx <= 0;
-				1:uart_tx <=r_Data[0];
-				2:uart_tx <=r_Data[1];
-				3:uart_tx <=r_Data[2];
-				4:uart_tx <=r_Data[3];
-				5:uart_tx <=r_Data[4];
-				6:uart_tx <=r_Data[5];
-				7:uart_tx <=r_Data[6];
-				8:uart_tx <=r_Data[7];
-				9:uart_tx <=1;
-				default:uart_tx <= uart_tx;
-			endcase
-		end	
-	//发送完成信号位逻辑
-	wire w_tx_done;
-	
-	assign w_tx_done = ((bit_cnt == MCNT_BIT)&&(baud_div_cnt == MCNT_BAUD));
-	
-	always@(posedge Clk)
-		tx_done <= w_tx_done;
-		
+    wire w_tx_done;
+    parameter CLOCK_FREQ = 50_000_000;
+    parameter BAUD = 115200;
+    parameter MCNT_BIT = 4'd9; // 4-bit counter to count 0-9
+    parameter MCNT_BAUD = 20'd434; // Calculated baud rate counter (CLOCK_FREQ / BAUD - 1)
+
+    reg [19:0] baud_div_cnt; // 20-bit counter for baud rate division
+    reg en_baud_cnt;
+    reg [3:0] bit_cnt; // 4-bit counter to count the bits
+    reg [7:0] r_Data;
+
+    // Enable baud counter logic
+    always @(posedge Clk or negedge Reset_n) begin
+        if (!Reset_n) begin
+            en_baud_cnt <= 0;
+        end else if (send_en) begin
+            en_baud_cnt <= 1;
+        end else if (w_tx_done) begin
+            en_baud_cnt <= 0;
+        end
+    end
+
+    // Baud rate division counter
+    always @(posedge Clk or negedge Reset_n) begin
+        if (!Reset_n) begin
+            baud_div_cnt <= 0;
+        end else if (en_baud_cnt) begin
+            if (baud_div_cnt == MCNT_BAUD) begin
+                baud_div_cnt <= 0;
+            end else begin
+                baud_div_cnt <= baud_div_cnt + 1'd1;
+            end
+        end else begin
+            baud_div_cnt <= 0;
+        end
+    end
+
+    // Bit counter logic
+    always @(posedge Clk or negedge Reset_n) begin
+        if (!Reset_n) begin
+            bit_cnt <= 0;
+        end else if (baud_div_cnt == MCNT_BAUD) begin
+            if (bit_cnt == MCNT_BIT) begin
+                bit_cnt <= 0;
+            end else begin
+                bit_cnt <= bit_cnt + 1'd1;
+            end
+        end
+    end
+
+    // Store data to be transmitted
+    always @(posedge Clk or negedge Reset_n) begin
+        if (!Reset_n) begin
+            r_Data <= 0;
+        end else if (send_en) begin
+            r_Data <= Data;
+        end
+    end
+
+    // UART transmission logic
+    always @(posedge Clk or negedge Reset_n) begin
+        if (!Reset_n) begin
+            uart_tx <= 1;
+        end else begin
+            case (bit_cnt)
+                4'd0: uart_tx <= 0; // Start bit
+                4'd1: uart_tx <= r_Data[0];
+                4'd2: uart_tx <= r_Data[1];
+                4'd3: uart_tx <= r_Data[2];
+                4'd4: uart_tx <= r_Data[3];
+                4'd5: uart_tx <= r_Data[4];
+                4'd6: uart_tx <= r_Data[5];
+                4'd7: uart_tx <= r_Data[6];
+                4'd8: uart_tx <= r_Data[7];
+                4'd9: uart_tx <= 1; // Stop bit
+                default: uart_tx <= 1;
+            endcase
+        end
+    end
+
+    // Transmission done signal
+    assign w_tx_done = ((bit_cnt == MCNT_BIT) && (baud_div_cnt == MCNT_BAUD));
+
+    always @(posedge Clk or negedge Reset_n) begin
+        if (!Reset_n) begin
+            tx_done <= 0;
+        end else begin
+            tx_done <= w_tx_done;
+        end
+    end
+
 endmodule
-			

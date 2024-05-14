@@ -1,5 +1,5 @@
 Flow report for FPGA_oscilloscope
-Sat May 11 16:10:36 2024
+Wed May 15 01:28:07 2024
 Quartus II 64-Bit Version 13.0.0 Build 156 04/24/2013 SJ Full Version
 
 
@@ -40,20 +40,20 @@ applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Flow Summary                                                                     ;
 +------------------------------------+---------------------------------------------+
-; Flow Status                        ; Successful - Sat May 11 16:10:36 2024       ;
+; Flow Status                        ; Successful - Wed May 15 01:28:07 2024       ;
 ; Quartus II 64-Bit Version          ; 13.0.0 Build 156 04/24/2013 SJ Full Version ;
 ; Revision Name                      ; FPGA_oscilloscope                           ;
 ; Top-level Entity Name              ; FPGA_oscilloscope                           ;
 ; Family                             ; Cyclone IV E                                ;
 ; Device                             ; EP4CE10F17C8                                ;
 ; Timing Models                      ; Final                                       ;
-; Total logic elements               ; 0 / 10,320 ( 0 % )                          ;
-;     Total combinational functions  ; 0 / 10,320 ( 0 % )                          ;
-;     Dedicated logic registers      ; 0 / 10,320 ( 0 % )                          ;
-; Total registers                    ; 0                                           ;
-; Total pins                         ; 11 / 180 ( 6 % )                            ;
+; Total logic elements               ; 963 / 10,320 ( 9 % )                        ;
+;     Total combinational functions  ; 568 / 10,320 ( 6 % )                        ;
+;     Dedicated logic registers      ; 793 / 10,320 ( 8 % )                        ;
+; Total registers                    ; 793                                         ;
+; Total pins                         ; 13 / 180 ( 7 % )                            ;
 ; Total virtual pins                 ; 0                                           ;
-; Total memory bits                  ; 0 / 423,936 ( 0 % )                         ;
+; Total memory bits                  ; 12,032 / 423,936 ( 3 % )                    ;
 ; Embedded Multiplier 9-bit elements ; 0 / 46 ( 0 % )                              ;
 ; Total PLLs                         ; 0 / 2 ( 0 % )                               ;
 +------------------------------------+---------------------------------------------+
@@ -64,31 +64,64 @@ applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 05/11/2024 16:10:23 ;
+; Start date & time ; 05/15/2024 01:27:50 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; FPGA_oscilloscope   ;
 +-------------------+---------------------+
 
 
-+---------------------------------------------------------------------------------------------------------------------+
-; Flow Non-Default Global Settings                                                                                    ;
-+-------------------------------------+--------------------------------+---------------+-------------+----------------+
-; Assignment Name                     ; Value                          ; Default Value ; Entity Name ; Section Id     ;
-+-------------------------------------+--------------------------------+---------------+-------------+----------------+
-; COMPILER_SIGNATURE_ID               ; 92384127978119.171541502312432 ; --            ; --          ; --             ;
-; EDA_OUTPUT_DATA_FORMAT              ; Verilog Hdl                    ; --            ; --          ; eda_simulation ;
-; EDA_SIMULATION_TOOL                 ; ModelSim-Altera (Verilog)      ; <None>        ; --          ; --             ;
-; IP_TOOL_NAME                        ; FIFO                           ; --            ; --          ; --             ;
-; IP_TOOL_VERSION                     ; 13.0                           ; --            ; --          ; --             ;
-; MAX_CORE_JUNCTION_TEMP              ; 85                             ; --            ; --          ; --             ;
-; MIN_CORE_JUNCTION_TEMP              ; 0                              ; --            ; --          ; --             ;
-; MISC_FILE                           ; IP/ADC0_FIFO_inst.v            ; --            ; --          ; --             ;
-; NOMINAL_CORE_SUPPLY_VOLTAGE         ; 1.2V                           ; --            ; --          ; --             ;
-; PARTITION_COLOR                     ; 16764057                       ; --            ; --          ; Top            ;
-; PARTITION_FITTER_PRESERVATION_LEVEL ; PLACEMENT_AND_ROUTING          ; --            ; --          ; Top            ;
-; PARTITION_NETLIST_TYPE              ; SOURCE                         ; --            ; --          ; Top            ;
-; PROJECT_OUTPUT_DIRECTORY            ; output_files                   ; --            ; --          ; --             ;
-+-------------------------------------+--------------------------------+---------------+-------------+----------------+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Flow Non-Default Global Settings                                                                                                                                                                                               ;
++--------------------------------------+------------------------------------------------------------------------------------------------------------------------------------+---------------+-------------+----------------------+
+; Assignment Name                      ; Value                                                                                                                              ; Default Value ; Entity Name ; Section Id           ;
++--------------------------------------+------------------------------------------------------------------------------------------------------------------------------------+---------------+-------------+----------------------+
+; COMPILER_SIGNATURE_ID                ; 92384127978119.171570767009876                                                                                                     ; --            ; --          ; --                   ;
+; EDA_DESIGN_INSTANCE_NAME             ; NA                                                                                                                                 ; --            ; --          ; FPGA_oscilloscope_tb ;
+; EDA_NATIVELINK_SIMULATION_TEST_BENCH ; FPGA_oscilloscope_tb                                                                                                               ; --            ; --          ; eda_simulation       ;
+; EDA_OUTPUT_DATA_FORMAT               ; Verilog Hdl                                                                                                                        ; --            ; --          ; eda_simulation       ;
+; EDA_SIMULATION_TOOL                  ; ModelSim-Altera (Verilog)                                                                                                          ; <None>        ; --          ; --                   ;
+; EDA_TEST_BENCH_ENABLE_STATUS         ; TEST_BENCH_MODE                                                                                                                    ; --            ; --          ; eda_simulation       ;
+; EDA_TEST_BENCH_FILE                  ; src/FPGA_oscilloscope_tb.v                                                                                                         ; --            ; --          ; FPGA_oscilloscope_tb ;
+; EDA_TEST_BENCH_MODULE_NAME           ; FPGA_oscilloscope_tb                                                                                                               ; --            ; --          ; FPGA_oscilloscope_tb ;
+; EDA_TEST_BENCH_NAME                  ; FPGA_oscilloscope_tb                                                                                                               ; --            ; --          ; eda_simulation       ;
+; EDA_TIME_SCALE                       ; 1 ps                                                                                                                               ; --            ; --          ; eda_simulation       ;
+; ENABLE_SIGNALTAP                     ; On                                                                                                                                 ; --            ; --          ; --                   ;
+; IP_TOOL_NAME                         ; FIFO                                                                                                                               ; --            ; --          ; --                   ;
+; IP_TOOL_VERSION                      ; 13.0                                                                                                                               ; --            ; --          ; --                   ;
+; MAX_CORE_JUNCTION_TEMP               ; 85                                                                                                                                 ; --            ; --          ; --                   ;
+; MIN_CORE_JUNCTION_TEMP               ; 0                                                                                                                                  ; --            ; --          ; --                   ;
+; MISC_FILE                            ; IP/ADC0_FIFO_inst.v                                                                                                                ; --            ; --          ; --                   ;
+; NOMINAL_CORE_SUPPLY_VOLTAGE          ; 1.2V                                                                                                                               ; --            ; --          ; --                   ;
+; PARTITION_COLOR                      ; 16764057                                                                                                                           ; --            ; --          ; Top                  ;
+; PARTITION_FITTER_PRESERVATION_LEVEL  ; PLACEMENT_AND_ROUTING                                                                                                              ; --            ; --          ; Top                  ;
+; PARTITION_NETLIST_TYPE               ; SOURCE                                                                                                                             ; --            ; --          ; Top                  ;
+; PROJECT_OUTPUT_DIRECTORY             ; output_files                                                                                                                       ; --            ; --          ; --                   ;
+; SLD_FILE                             ; E:/Graduation Design/mutil-channel-oscilloscope/FPGA_oscilloscope/stp1_auto_stripped.stp                                           ; --            ; --          ; --                   ;
+; SLD_NODE_CREATOR_ID                  ; 110                                                                                                                                ; --            ; --          ; auto_signaltap_0     ;
+; SLD_NODE_ENTITY_NAME                 ; sld_signaltap                                                                                                                      ; --            ; --          ; auto_signaltap_0     ;
+; SLD_NODE_PARAMETER_ASSIGNMENT        ; SLD_NODE_INFO=805334528                                                                                                            ; --            ; --          ; auto_signaltap_0     ;
+; SLD_NODE_PARAMETER_ASSIGNMENT        ; SLD_POWER_UP_TRIGGER=0                                                                                                             ; --            ; --          ; auto_signaltap_0     ;
+; SLD_NODE_PARAMETER_ASSIGNMENT        ; SLD_STORAGE_QUALIFIER_INVERSION_MASK_LENGTH=0                                                                                      ; --            ; --          ; auto_signaltap_0     ;
+; SLD_NODE_PARAMETER_ASSIGNMENT        ; SLD_SEGMENT_SIZE=128                                                                                                               ; --            ; --          ; auto_signaltap_0     ;
+; SLD_NODE_PARAMETER_ASSIGNMENT        ; SLD_ATTRIBUTE_MEM_MODE=OFF                                                                                                         ; --            ; --          ; auto_signaltap_0     ;
+; SLD_NODE_PARAMETER_ASSIGNMENT        ; SLD_STATE_FLOW_USE_GENERATED=0                                                                                                     ; --            ; --          ; auto_signaltap_0     ;
+; SLD_NODE_PARAMETER_ASSIGNMENT        ; SLD_STATE_BITS=11                                                                                                                  ; --            ; --          ; auto_signaltap_0     ;
+; SLD_NODE_PARAMETER_ASSIGNMENT        ; SLD_BUFFER_FULL_STOP=1                                                                                                             ; --            ; --          ; auto_signaltap_0     ;
+; SLD_NODE_PARAMETER_ASSIGNMENT        ; SLD_CURRENT_RESOURCE_WIDTH=1                                                                                                       ; --            ; --          ; auto_signaltap_0     ;
+; SLD_NODE_PARAMETER_ASSIGNMENT        ; SLD_TRIGGER_LEVEL=1                                                                                                                ; --            ; --          ; auto_signaltap_0     ;
+; SLD_NODE_PARAMETER_ASSIGNMENT        ; SLD_SAMPLE_DEPTH=128                                                                                                               ; --            ; --          ; auto_signaltap_0     ;
+; SLD_NODE_PARAMETER_ASSIGNMENT        ; SLD_TRIGGER_IN_ENABLED=0                                                                                                           ; --            ; --          ; auto_signaltap_0     ;
+; SLD_NODE_PARAMETER_ASSIGNMENT        ; SLD_ADVANCED_TRIGGER_ENTITY=basic,1,                                                                                               ; --            ; --          ; auto_signaltap_0     ;
+; SLD_NODE_PARAMETER_ASSIGNMENT        ; SLD_TRIGGER_LEVEL_PIPELINE=1                                                                                                       ; --            ; --          ; auto_signaltap_0     ;
+; SLD_NODE_PARAMETER_ASSIGNMENT        ; SLD_ENABLE_ADVANCED_TRIGGER=0                                                                                                      ; --            ; --          ; auto_signaltap_0     ;
+; SLD_NODE_PARAMETER_ASSIGNMENT        ; SLD_DATA_BITS=30                                                                                                                   ; --            ; --          ; auto_signaltap_0     ;
+; SLD_NODE_PARAMETER_ASSIGNMENT        ; SLD_TRIGGER_BITS=30                                                                                                                ; --            ; --          ; auto_signaltap_0     ;
+; SLD_NODE_PARAMETER_ASSIGNMENT        ; SLD_INVERSION_MASK=000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 ; --            ; --          ; auto_signaltap_0     ;
+; SLD_NODE_PARAMETER_ASSIGNMENT        ; SLD_INVERSION_MASK_LENGTH=111                                                                                                      ; --            ; --          ; auto_signaltap_0     ;
+; SLD_NODE_PARAMETER_ASSIGNMENT        ; SLD_NODE_CRC_LOWORD=33150                                                                                                          ; --            ; --          ; auto_signaltap_0     ;
+; SLD_NODE_PARAMETER_ASSIGNMENT        ; SLD_NODE_CRC_HIWORD=10795                                                                                                          ; --            ; --          ; auto_signaltap_0     ;
+; USE_SIGNALTAP_FILE                   ; stp1.stp                                                                                                                           ; --            ; --          ; --                   ;
++--------------------------------------+------------------------------------------------------------------------------------------------------------------------------------+---------------+-------------+----------------------+
 
 
 +-------------------------------------------------------------------------------------------------------------------------------+
@@ -96,12 +129,12 @@ applicable agreement for further details.
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis      ; 00:00:02     ; 1.0                     ; 4600 MB             ; 00:00:01                           ;
-; Fitter                    ; 00:00:04     ; 4.8                     ; 5779 MB             ; 00:00:02                           ;
-; Assembler                 ; 00:00:01     ; 1.0                     ; 4547 MB             ; 00:00:01                           ;
-; TimeQuest Timing Analyzer ; 00:00:01     ; 1.0                     ; 4692 MB             ; 00:00:01                           ;
-; EDA Netlist Writer        ; 00:00:00     ; 1.0                     ; 4508 MB             ; 00:00:00                           ;
-; Total                     ; 00:00:08     ; --                      ; --                  ; 00:00:05                           ;
+; Analysis & Synthesis      ; 00:00:04     ; 1.0                     ; 4696 MB             ; 00:00:03                           ;
+; Fitter                    ; 00:00:06     ; 4.0                     ; 5926 MB             ; 00:00:04                           ;
+; Assembler                 ; 00:00:01     ; 1.0                     ; 4560 MB             ; 00:00:01                           ;
+; TimeQuest Timing Analyzer ; 00:00:02     ; 1.0                     ; 4714 MB             ; 00:00:01                           ;
+; EDA Netlist Writer        ; 00:00:01     ; 1.0                     ; 4529 MB             ; 00:00:01                           ;
+; Total                     ; 00:00:14     ; --                      ; --                  ; 00:00:10                           ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

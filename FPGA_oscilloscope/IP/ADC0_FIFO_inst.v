@@ -1,12 +1,11 @@
 ADC0_FIFO	ADC0_FIFO_inst (
-	.clock ( clock_sig ),
+	.aclr ( aclr_sig ),
 	.data ( data_sig ),
+	.rdclk ( rdclk_sig ),
 	.rdreq ( rdreq_sig ),
-	.sclr ( sclr_sig ),
+	.wrclk ( wrclk_sig ),
 	.wrreq ( wrreq_sig ),
-	.almost_empty ( almost_empty_sig ),
-	.almost_full ( almost_full_sig ),
-	.empty ( empty_sig ),
-	.full ( full_sig ),
-	.q ( q_sig )
+	.q ( q_sig ),
+	.rdempty ( rdempty_sig ),
+	.wrfull ( wrfull_sig )
 	);

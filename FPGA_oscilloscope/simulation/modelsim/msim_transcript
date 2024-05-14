@@ -1,0 +1,27 @@
+# Reading E:/Quartus II 13/modelsim_ase/tcl/vsim/pref.tcl 
+# do FPGA_oscilloscope_run_msim_rtl_verilog.do 
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Copying E:\Quartus II 13\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# ** Warning: Copied E:\Quartus II 13\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini.
+#          Updated modelsim.ini.
+# 
+# vlog -vlog01compat -work work +incdir+E:/Graduation\ Design/mutil-channel-oscilloscope/FPGA_oscilloscope/src {E:/Graduation Design/mutil-channel-oscilloscope/FPGA_oscilloscope/src/uart.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module Uart
+# 
+# Top level modules:
+# 	Uart
+# vlog -vlog01compat -work work +incdir+E:/Graduation\ Design/mutil-channel-oscilloscope/FPGA_oscilloscope/src {E:/Graduation Design/mutil-channel-oscilloscope/FPGA_oscilloscope/src/FPGA_oscilloscope.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module FPGA_oscilloscope
+# ** Error: E:/Graduation Design/mutil-channel-oscilloscope/FPGA_oscilloscope/src/FPGA_oscilloscope.v(41): 'clk2' already declared in this scope (FPGA_oscilloscope).
+# ** Error: E:/Quartus II 13/modelsim_ase/win32aloem/vlog failed.
+# Error in macro ./FPGA_oscilloscope_run_msim_rtl_verilog.do line 9
+# E:/Quartus II 13/modelsim_ase/win32aloem/vlog failed.
+#     while executing
+# "vlog -vlog01compat -work work +incdir+E:/Graduation\ Design/mutil-channel-oscilloscope/FPGA_oscilloscope/src {E:/Graduation Design/mutil-channel-oscil..."
