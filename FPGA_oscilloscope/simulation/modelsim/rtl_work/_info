@@ -3,24 +3,108 @@ K3
 13
 cModel Technology
 Z0 dE:\Graduation Design\mutil-channel-oscilloscope\FPGA_oscilloscope\simulation\modelsim
-vUart
+vADC0_drive
+IGU>M`2E0cf_G>S7g2OVh42
+V60;>fa_1jN?S_6<I6HVbD3
+Z1 dE:\Graduation Design\mutil-channel-oscilloscope\FPGA_oscilloscope\simulation\modelsim
+w1715741859
+8E:/Graduation Design/mutil-channel-oscilloscope/FPGA_oscilloscope/src/ADC0_drive.v
+FE:/Graduation Design/mutil-channel-oscilloscope/FPGA_oscilloscope/src/ADC0_drive.v
+L0 1
+Z2 OV;L;10.1d;51
+r1
+31
+Z3 o-vlog01compat -work work -O0
+Z4 !s92 -vlog01compat -work work {+incdir+E:/Graduation Design/mutil-channel-oscilloscope/FPGA_oscilloscope/src} -O0
+n@a@d@c0_drive
 !i10b 1
-!s100 KH>WJWeA@f=@Rfhc2SEKd0
+!s100 lf`PTVnJR?jFohP69E4aj1
+!s85 0
+!s108 1715745916.342000
+!s107 E:/Graduation Design/mutil-channel-oscilloscope/FPGA_oscilloscope/src/ADC0_drive.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+E:/Graduation Design/mutil-channel-oscilloscope/FPGA_oscilloscope/src|E:/Graduation Design/mutil-channel-oscilloscope/FPGA_oscilloscope/src/ADC0_drive.v|
+!s101 -O0
+vADC0_FIFO
+IF[cS9I74^We>AUW962jaQ2
+V00VPciMTABmF2WJBI0>nE2
+R1
+w1715670472
+8E:/Graduation Design/mutil-channel-oscilloscope/FPGA_oscilloscope/IP/ADC0_FIFO.v
+FE:/Graduation Design/mutil-channel-oscilloscope/FPGA_oscilloscope/IP/ADC0_FIFO.v
+L0 39
+R2
+r1
+31
+R3
+n@a@d@c0_@f@i@f@o
+!i10b 1
+!s100 7WQPD[VQm[B381Ci8Mc102
+!s85 0
+!s108 1715745916.278000
+!s107 E:/Graduation Design/mutil-channel-oscilloscope/FPGA_oscilloscope/IP/ADC0_FIFO.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+E:/Graduation Design/mutil-channel-oscilloscope/FPGA_oscilloscope/IP|E:/Graduation Design/mutil-channel-oscilloscope/FPGA_oscilloscope/IP/ADC0_FIFO.v|
+!s101 -O0
+!s92 -vlog01compat -work work {+incdir+E:/Graduation Design/mutil-channel-oscilloscope/FPGA_oscilloscope/IP} -O0
+vFPGA_oscilloscope
+Il^0Un`m?PP1@E3MN7TN5P1
+V<`^Q[>E9AA4m5PWPMSkj;0
+R1
+w1715743044
+8E:/Graduation Design/mutil-channel-oscilloscope/FPGA_oscilloscope/src/FPGA_oscilloscope.v
+FE:/Graduation Design/mutil-channel-oscilloscope/FPGA_oscilloscope/src/FPGA_oscilloscope.v
+L0 1
+R2
+r1
+31
+R3
+R4
+n@f@p@g@a_oscilloscope
+!i10b 1
+!s100 QJgB4^Z1^lJ>6[Q3jlmW[1
+!s85 0
+!s108 1715745916.213000
+!s107 E:/Graduation Design/mutil-channel-oscilloscope/FPGA_oscilloscope/src/FPGA_oscilloscope.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+E:/Graduation Design/mutil-channel-oscilloscope/FPGA_oscilloscope/src|E:/Graduation Design/mutil-channel-oscilloscope/FPGA_oscilloscope/src/FPGA_oscilloscope.v|
+!s101 -O0
+vFPGA_oscilloscope_tb
+!i10b 1
+!s100 6KXzFPNe:1O[Q]Dl7K>PS0
+Ii_FjVH_a]ChO;5:<[fEEh2
+VX<M<;1YAjakj[h:o4zZ5f2
+R1
+w1715696352
+8E:/Graduation Design/mutil-channel-oscilloscope/FPGA_oscilloscope/src/FPGA_oscilloscope_tb.v
+FE:/Graduation Design/mutil-channel-oscilloscope/FPGA_oscilloscope/src/FPGA_oscilloscope_tb.v
+L0 2
+R2
+r1
+!s85 0
+31
+!s108 1715745916.406000
+!s107 E:/Graduation Design/mutil-channel-oscilloscope/FPGA_oscilloscope/src/FPGA_oscilloscope_tb.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+E:/Graduation Design/mutil-channel-oscilloscope/FPGA_oscilloscope/src|E:/Graduation Design/mutil-channel-oscilloscope/FPGA_oscilloscope/src/FPGA_oscilloscope_tb.v|
+!s101 -O0
+R3
+R4
+n@f@p@g@a_oscilloscope_tb
+vUart
 IhVXzN0QX2`3[?f<K3K_nM0
 Veda>iL3[oh2E?RoTo1cc;1
-Z1 dE:\Graduation Design\mutil-channel-oscilloscope\FPGA_oscilloscope\simulation\modelsim
+R1
 w1715695473
 8E:/Graduation Design/mutil-channel-oscilloscope/FPGA_oscilloscope/src/uart.v
 FE:/Graduation Design/mutil-channel-oscilloscope/FPGA_oscilloscope/src/uart.v
 L0 1
-OV;L;10.1d;51
+R2
 r1
-!s85 0
 31
-!s108 1715706914.451000
+R3
+n@uart
+R4
+!i10b 1
+!s100 KH>WJWeA@f=@Rfhc2SEKd0
+!s85 0
+!s108 1715745916.124000
 !s107 E:/Graduation Design/mutil-channel-oscilloscope/FPGA_oscilloscope/src/uart.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+E:/Graduation Design/mutil-channel-oscilloscope/FPGA_oscilloscope/src|E:/Graduation Design/mutil-channel-oscilloscope/FPGA_oscilloscope/src/uart.v|
 !s101 -O0
-o-vlog01compat -work work -O0
-!s92 -vlog01compat -work work {+incdir+E:/Graduation Design/mutil-channel-oscilloscope/FPGA_oscilloscope/src} -O0
-n@uart
