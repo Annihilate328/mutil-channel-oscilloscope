@@ -1,5 +1,5 @@
 Flow report for FPGA_control
-Thu May 16 02:08:56 2024
+Thu May 16 08:19:42 2024
 Quartus II 64-Bit Version 13.0.0 Build 156 04/24/2013 SJ Full Version
 
 
@@ -40,15 +40,15 @@ applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Flow Summary                                                                     ;
 +------------------------------------+---------------------------------------------+
-; Flow Status                        ; Successful - Thu May 16 02:08:56 2024       ;
+; Flow Status                        ; Successful - Thu May 16 08:19:42 2024       ;
 ; Quartus II 64-Bit Version          ; 13.0.0 Build 156 04/24/2013 SJ Full Version ;
 ; Revision Name                      ; FPGA_control                                ;
 ; Top-level Entity Name              ; FPGA_control                                ;
 ; Family                             ; Cyclone IV E                                ;
 ; Device                             ; EP4CE10F17C8                                ;
 ; Timing Models                      ; Final                                       ;
-; Total logic elements               ; 1,427 / 10,320 ( 14 % )                     ;
-;     Total combinational functions  ; 727 / 10,320 ( 7 % )                        ;
+; Total logic elements               ; 1,431 / 10,320 ( 14 % )                     ;
+;     Total combinational functions  ; 728 / 10,320 ( 7 % )                        ;
 ;     Dedicated logic registers      ; 1,212 / 10,320 ( 12 % )                     ;
 ; Total registers                    ; 1212                                        ;
 ; Total pins                         ; 19 / 180 ( 11 % )                           ;
@@ -64,7 +64,7 @@ applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 05/16/2024 02:08:36 ;
+; Start date & time ; 05/16/2024 08:19:18 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; FPGA_control        ;
 +-------------------+---------------------+
@@ -75,7 +75,7 @@ applicable agreement for further details.
 +-------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------------+-------------+------------------+
 ; Assignment Name                     ; Value                                                                                                                                                                                                                                      ; Default Value ; Entity Name ; Section Id       ;
 +-------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------------+-------------+------------------+
-; COMPILER_SIGNATURE_ID               ; 92384127978119.171579651617204                                                                                                                                                                                                             ; --            ; --          ; --               ;
+; COMPILER_SIGNATURE_ID               ; 92384127978119.171581875804840                                                                                                                                                                                                             ; --            ; --          ; --               ;
 ; EDA_OUTPUT_DATA_FORMAT              ; Verilog Hdl                                                                                                                                                                                                                                ; --            ; --          ; eda_simulation   ;
 ; EDA_SIMULATION_TOOL                 ; ModelSim-Altera (Verilog)                                                                                                                                                                                                                  ; <None>        ; --          ; --               ;
 ; ENABLE_SIGNALTAP                    ; On                                                                                                                                                                                                                                         ; --            ; --          ; --               ;
@@ -122,12 +122,12 @@ applicable agreement for further details.
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis      ; 00:00:05     ; 1.0                     ; 4710 MB             ; 00:00:04                           ;
-; Fitter                    ; 00:00:06     ; 1.0                     ; 5935 MB             ; 00:00:05                           ;
+; Analysis & Synthesis      ; 00:00:08     ; 1.0                     ; 4714 MB             ; 00:00:02                           ;
+; Fitter                    ; 00:00:08     ; 2.2                     ; 5922 MB             ; 00:00:03                           ;
 ; Assembler                 ; 00:00:01     ; 1.0                     ; 4556 MB             ; 00:00:01                           ;
-; TimeQuest Timing Analyzer ; 00:00:02     ; 1.0                     ; 4715 MB             ; 00:00:01                           ;
-; EDA Netlist Writer        ; 00:00:02     ; 1.0                     ; 4550 MB             ; 00:00:02                           ;
-; Total                     ; 00:00:16     ; --                      ; --                  ; 00:00:13                           ;
+; TimeQuest Timing Analyzer ; 00:00:03     ; 1.0                     ; 4721 MB             ; 00:00:01                           ;
+; EDA Netlist Writer        ; 00:00:01     ; 1.0                     ; 4550 MB             ; 00:00:02                           ;
+; Total                     ; 00:00:21     ; --                      ; --                  ; 00:00:09                           ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

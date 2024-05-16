@@ -42,6 +42,8 @@ module ADC0_drive(
 			end else if (count > 5130 && ADC0_bg == 1) begin
 				count <= 13'd0;
 				ADC0_end <= 0;
+			end else if (count > 5130 && empty == 1) begin
+				ADC0_end <= 0;
 			end
 		end
 	end
