@@ -76,24 +76,24 @@ set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_ADVANCED_TRIGGER_
 set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_TRIGGER_LEVEL_PIPELINE=1" -section_id auto_signaltap_0
 set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_ENABLE_ADVANCED_TRIGGER=0" -section_id auto_signaltap_0
 set_global_assignment -name STRATIX_DEVICE_IO_STANDARD "2.5 V"
-set_location_assignment PIN_C3 -to ADC0_Data[7]
-set_location_assignment PIN_D4 -to ADC0_Data[6]
-set_location_assignment PIN_C2 -to ADC0_Data[5]
-set_location_assignment PIN_B1 -to ADC0_Data[4]
-set_location_assignment PIN_D3 -to ADC0_Data[3]
-set_location_assignment PIN_E5 -to ADC0_Data[2]
-set_location_assignment PIN_D1 -to ADC0_Data[1]
-set_location_assignment PIN_F1 -to ADC0_Data[0]
-set_location_assignment PIN_K16 -to ADC0_O_Data[7]
+set_location_assignment PIN_E5 -to ADC0_Data[7]
+set_location_assignment PIN_D3 -to ADC0_Data[6]
+set_location_assignment PIN_F1 -to ADC0_Data[5]
+set_location_assignment PIN_D1 -to ADC0_Data[4]
+set_location_assignment PIN_F2 -to ADC0_Data[3]
+set_location_assignment PIN_F5 -to ADC0_Data[2]
+set_location_assignment PIN_G1 -to ADC0_Data[1]
+set_location_assignment PIN_G2 -to ADC0_Data[0]
+set_location_assignment PIN_R16 -to ADC0_O_Data[7]
 set_location_assignment PIN_E1 -to Clk
 set_location_assignment PIN_M16 -to Reset_n
-set_location_assignment PIN_J16 -to ADC0_O_Data[6]
-set_location_assignment PIN_K11 -to ADC0_O_Data[5]
-set_location_assignment PIN_L13 -to ADC0_O_Data[4]
-set_location_assignment PIN_L12 -to ADC0_O_Data[3]
-set_location_assignment PIN_J13 -to ADC0_O_Data[2]
-set_location_assignment PIN_J15 -to ADC0_O_Data[1]
-set_location_assignment PIN_J14 -to ADC0_O_Data[0]
+set_location_assignment PIN_F13 -to ADC0_O_Data[6]
+set_location_assignment PIN_F15 -to ADC0_O_Data[5]
+set_location_assignment PIN_G15 -to ADC0_O_Data[4]
+set_location_assignment PIN_F14 -to ADC0_O_Data[3]
+set_location_assignment PIN_G11 -to ADC0_O_Data[2]
+set_location_assignment PIN_J11 -to ADC0_O_Data[1]
+set_location_assignment PIN_J12 -to ADC0_O_Data[0]
 set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to ADC0_Data[7]
 set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to ADC0_Data[6]
 set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to ADC0_Data[5]
@@ -112,143 +112,204 @@ set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to ADC0_O_Data[1]
 set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to ADC0_O_Data[0]
 set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to Clk
 set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to Reset_n
-set_location_assignment PIN_B6 -to ADC0_Clk
+set_location_assignment PIN_B1 -to ADC0_Clk
 set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to ADC0_Clk
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[0] -to ADC0_Clk -section_id auto_signaltap_0
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[1] -to ADC0_Data[0] -section_id auto_signaltap_0
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[2] -to ADC0_Data[1] -section_id auto_signaltap_0
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[3] -to ADC0_Data[2] -section_id auto_signaltap_0
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[4] -to ADC0_Data[3] -section_id auto_signaltap_0
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[5] -to ADC0_Data[4] -section_id auto_signaltap_0
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[6] -to ADC0_Data[5] -section_id auto_signaltap_0
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[7] -to ADC0_Data[6] -section_id auto_signaltap_0
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[8] -to ADC0_Data[7] -section_id auto_signaltap_0
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[0] -to ADC0_Clk -section_id auto_signaltap_0
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[1] -to ADC0_Data[0] -section_id auto_signaltap_0
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[2] -to ADC0_Data[1] -section_id auto_signaltap_0
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[3] -to ADC0_Data[2] -section_id auto_signaltap_0
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[4] -to ADC0_Data[3] -section_id auto_signaltap_0
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[5] -to ADC0_Data[4] -section_id auto_signaltap_0
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[6] -to ADC0_Data[5] -section_id auto_signaltap_0
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[7] -to ADC0_Data[6] -section_id auto_signaltap_0
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[8] -to ADC0_Data[7] -section_id auto_signaltap_0
 set_global_assignment -name CDF_FILE output_files/Chain1.cdf
-set_location_assignment PIN_D5 -to ADC0_Data[9]
-set_location_assignment PIN_D6 -to ADC0_Data[8]
-set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to ADC0_Data[9]
-set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to ADC0_Data[8]
 set_location_assignment PIN_N14 -to ADC0_bg
-set_location_assignment PIN_L15 -to ADC0_O_Data[8]
-set_location_assignment PIN_K12 -to ADC0_O_Data[9]
-set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to ADC0_O_Data[9]
-set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to ADC0_O_Data[8]
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[9] -to ADC0_Data[8] -section_id auto_signaltap_0
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[10] -to ADC0_Data[9] -section_id auto_signaltap_0
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[11] -to ADC0_O_Data[0] -section_id auto_signaltap_0
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[12] -to ADC0_O_Data[1] -section_id auto_signaltap_0
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[13] -to ADC0_O_Data[2] -section_id auto_signaltap_0
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[14] -to ADC0_O_Data[3] -section_id auto_signaltap_0
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[15] -to ADC0_O_Data[4] -section_id auto_signaltap_0
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[16] -to ADC0_O_Data[5] -section_id auto_signaltap_0
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[17] -to ADC0_O_Data[6] -section_id auto_signaltap_0
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[18] -to ADC0_O_Data[7] -section_id auto_signaltap_0
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[19] -to ADC0_O_Data[8] -section_id auto_signaltap_0
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[20] -to ADC0_O_Data[9] -section_id auto_signaltap_0
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[21] -to "ADC0_drive:ADC0_drive|ADC0_FIFO:ADC0_FIFO_inst|full" -section_id auto_signaltap_0
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[22] -to "ADC0_drive:ADC0_drive|ADC0_FIFO:ADC0_FIFO_inst|usedw[0]" -section_id auto_signaltap_0
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[23] -to "ADC0_drive:ADC0_drive|ADC0_FIFO:ADC0_FIFO_inst|usedw[10]" -section_id auto_signaltap_0
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[24] -to "ADC0_drive:ADC0_drive|ADC0_FIFO:ADC0_FIFO_inst|usedw[11]" -section_id auto_signaltap_0
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[25] -to "ADC0_drive:ADC0_drive|ADC0_FIFO:ADC0_FIFO_inst|usedw[1]" -section_id auto_signaltap_0
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[26] -to "ADC0_drive:ADC0_drive|ADC0_FIFO:ADC0_FIFO_inst|usedw[2]" -section_id auto_signaltap_0
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[27] -to "ADC0_drive:ADC0_drive|ADC0_FIFO:ADC0_FIFO_inst|usedw[3]" -section_id auto_signaltap_0
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[28] -to "ADC0_drive:ADC0_drive|ADC0_FIFO:ADC0_FIFO_inst|usedw[4]" -section_id auto_signaltap_0
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[29] -to "ADC0_drive:ADC0_drive|ADC0_FIFO:ADC0_FIFO_inst|usedw[5]" -section_id auto_signaltap_0
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[30] -to "ADC0_drive:ADC0_drive|ADC0_FIFO:ADC0_FIFO_inst|usedw[6]" -section_id auto_signaltap_0
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[31] -to "ADC0_drive:ADC0_drive|ADC0_FIFO:ADC0_FIFO_inst|usedw[7]" -section_id auto_signaltap_0
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[32] -to "ADC0_drive:ADC0_drive|ADC0_FIFO:ADC0_FIFO_inst|usedw[8]" -section_id auto_signaltap_0
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[33] -to "ADC0_drive:ADC0_drive|ADC0_FIFO:ADC0_FIFO_inst|usedw[9]" -section_id auto_signaltap_0
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[34] -to "ADC0_drive:ADC0_drive|ADC0_bg" -section_id auto_signaltap_0
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[35] -to "ADC0_drive:ADC0_drive|ADC0_end" -section_id auto_signaltap_0
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[36] -to "ADC0_drive:ADC0_drive|Tri" -section_id auto_signaltap_0
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[37] -to "ADC0_drive:ADC0_drive|count[0]" -section_id auto_signaltap_0
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[38] -to "ADC0_drive:ADC0_drive|count[10]" -section_id auto_signaltap_0
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[39] -to "ADC0_drive:ADC0_drive|count[11]" -section_id auto_signaltap_0
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[40] -to "ADC0_drive:ADC0_drive|count[12]" -section_id auto_signaltap_0
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[41] -to "ADC0_drive:ADC0_drive|count[1]" -section_id auto_signaltap_0
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[42] -to "ADC0_drive:ADC0_drive|count[2]" -section_id auto_signaltap_0
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[43] -to "ADC0_drive:ADC0_drive|count[3]" -section_id auto_signaltap_0
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[44] -to "ADC0_drive:ADC0_drive|count[4]" -section_id auto_signaltap_0
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[45] -to "ADC0_drive:ADC0_drive|count[5]" -section_id auto_signaltap_0
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[46] -to "ADC0_drive:ADC0_drive|count[6]" -section_id auto_signaltap_0
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[47] -to "ADC0_drive:ADC0_drive|count[7]" -section_id auto_signaltap_0
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[48] -to "ADC0_drive:ADC0_drive|count[8]" -section_id auto_signaltap_0
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[49] -to "ADC0_drive:ADC0_drive|count[9]" -section_id auto_signaltap_0
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[50] -to "ADC0_drive:ADC0_drive|empty" -section_id auto_signaltap_0
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[51] -to "ADC0_drive:ADC0_drive|sclr" -section_id auto_signaltap_0
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[52] -to "ADC0_drive:ADC0_drive|state.000" -section_id auto_signaltap_0
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[53] -to "ADC0_drive:ADC0_drive|state.001" -section_id auto_signaltap_0
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[54] -to "ADC0_drive:ADC0_drive|state.010" -section_id auto_signaltap_0
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[55] -to "ADC0_drive:ADC0_drive|state.011" -section_id auto_signaltap_0
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[56] -to "ADC0_drive:ADC0_drive|state.100" -section_id auto_signaltap_0
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[57] -to "ADC0_drive:ADC0_drive|wrreq" -section_id auto_signaltap_0
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[58] -to ADC0_rdreq -section_id auto_signaltap_0
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[9] -to ADC0_Data[8] -section_id auto_signaltap_0
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[10] -to ADC0_Data[9] -section_id auto_signaltap_0
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[11] -to ADC0_O_Data[0] -section_id auto_signaltap_0
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[12] -to ADC0_O_Data[1] -section_id auto_signaltap_0
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[13] -to ADC0_O_Data[2] -section_id auto_signaltap_0
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[14] -to ADC0_O_Data[3] -section_id auto_signaltap_0
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[15] -to ADC0_O_Data[4] -section_id auto_signaltap_0
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[16] -to ADC0_O_Data[5] -section_id auto_signaltap_0
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[17] -to ADC0_O_Data[6] -section_id auto_signaltap_0
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[18] -to ADC0_O_Data[7] -section_id auto_signaltap_0
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[19] -to ADC0_O_Data[8] -section_id auto_signaltap_0
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[20] -to ADC0_O_Data[9] -section_id auto_signaltap_0
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[21] -to "ADC0_drive:ADC0_drive|ADC0_FIFO:ADC0_FIFO_inst|full" -section_id auto_signaltap_0
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[22] -to "ADC0_drive:ADC0_drive|ADC0_FIFO:ADC0_FIFO_inst|usedw[0]" -section_id auto_signaltap_0
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[23] -to "ADC0_drive:ADC0_drive|ADC0_FIFO:ADC0_FIFO_inst|usedw[10]" -section_id auto_signaltap_0
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[24] -to "ADC0_drive:ADC0_drive|ADC0_FIFO:ADC0_FIFO_inst|usedw[11]" -section_id auto_signaltap_0
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[25] -to "ADC0_drive:ADC0_drive|ADC0_FIFO:ADC0_FIFO_inst|usedw[1]" -section_id auto_signaltap_0
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[26] -to "ADC0_drive:ADC0_drive|ADC0_FIFO:ADC0_FIFO_inst|usedw[2]" -section_id auto_signaltap_0
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[27] -to "ADC0_drive:ADC0_drive|ADC0_FIFO:ADC0_FIFO_inst|usedw[3]" -section_id auto_signaltap_0
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[28] -to "ADC0_drive:ADC0_drive|ADC0_FIFO:ADC0_FIFO_inst|usedw[4]" -section_id auto_signaltap_0
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[29] -to "ADC0_drive:ADC0_drive|ADC0_FIFO:ADC0_FIFO_inst|usedw[5]" -section_id auto_signaltap_0
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[30] -to "ADC0_drive:ADC0_drive|ADC0_FIFO:ADC0_FIFO_inst|usedw[6]" -section_id auto_signaltap_0
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[31] -to "ADC0_drive:ADC0_drive|ADC0_FIFO:ADC0_FIFO_inst|usedw[7]" -section_id auto_signaltap_0
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[32] -to "ADC0_drive:ADC0_drive|ADC0_FIFO:ADC0_FIFO_inst|usedw[8]" -section_id auto_signaltap_0
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[33] -to "ADC0_drive:ADC0_drive|ADC0_FIFO:ADC0_FIFO_inst|usedw[9]" -section_id auto_signaltap_0
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[34] -to "ADC0_drive:ADC0_drive|ADC0_bg" -section_id auto_signaltap_0
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[35] -to "ADC0_drive:ADC0_drive|ADC0_end" -section_id auto_signaltap_0
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[36] -to "ADC0_drive:ADC0_drive|Tri" -section_id auto_signaltap_0
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[37] -to "ADC0_drive:ADC0_drive|count[0]" -section_id auto_signaltap_0
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[38] -to "ADC0_drive:ADC0_drive|count[10]" -section_id auto_signaltap_0
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[39] -to "ADC0_drive:ADC0_drive|count[11]" -section_id auto_signaltap_0
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[40] -to "ADC0_drive:ADC0_drive|count[12]" -section_id auto_signaltap_0
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[41] -to "ADC0_drive:ADC0_drive|count[1]" -section_id auto_signaltap_0
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[42] -to "ADC0_drive:ADC0_drive|count[2]" -section_id auto_signaltap_0
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[43] -to "ADC0_drive:ADC0_drive|count[3]" -section_id auto_signaltap_0
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[44] -to "ADC0_drive:ADC0_drive|count[4]" -section_id auto_signaltap_0
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[45] -to "ADC0_drive:ADC0_drive|count[5]" -section_id auto_signaltap_0
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[46] -to "ADC0_drive:ADC0_drive|count[6]" -section_id auto_signaltap_0
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[47] -to "ADC0_drive:ADC0_drive|count[7]" -section_id auto_signaltap_0
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[48] -to "ADC0_drive:ADC0_drive|count[8]" -section_id auto_signaltap_0
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[49] -to "ADC0_drive:ADC0_drive|count[9]" -section_id auto_signaltap_0
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[50] -to "ADC0_drive:ADC0_drive|empty" -section_id auto_signaltap_0
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[51] -to "ADC0_drive:ADC0_drive|sclr" -section_id auto_signaltap_0
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[52] -to "ADC0_drive:ADC0_drive|state.000" -section_id auto_signaltap_0
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[53] -to "ADC0_drive:ADC0_drive|state.001" -section_id auto_signaltap_0
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[54] -to "ADC0_drive:ADC0_drive|state.010" -section_id auto_signaltap_0
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[55] -to "ADC0_drive:ADC0_drive|state.011" -section_id auto_signaltap_0
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[56] -to "ADC0_drive:ADC0_drive|state.100" -section_id auto_signaltap_0
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[57] -to "ADC0_drive:ADC0_drive|wrreq" -section_id auto_signaltap_0
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[58] -to ADC0_rdreq -section_id auto_signaltap_0
-set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_DATA_BITS=59" -section_id auto_signaltap_0
-set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_TRIGGER_BITS=59" -section_id auto_signaltap_0
-set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_NODE_CRC_LOWORD=15099" -section_id auto_signaltap_0
-set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_INVERSION_MASK=0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000" -section_id auto_signaltap_0
-set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_INVERSION_MASK_LENGTH=202" -section_id auto_signaltap_0
 set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_SEGMENT_SIZE=2048" -section_id auto_signaltap_0
-set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_NODE_CRC_HIWORD=33865" -section_id auto_signaltap_0
 set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_SAMPLE_DEPTH=2048" -section_id auto_signaltap_0
+set_global_assignment -name VERILOG_FILE src/ADC1_drive.v
+set_global_assignment -name QIP_FILE IP/ADC1_FIFO.qip
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[0] -to ADC0_Data[0] -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[1] -to ADC0_Data[1] -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[2] -to ADC0_Data[2] -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[3] -to ADC0_Data[3] -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[4] -to ADC0_Data[4] -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[5] -to ADC0_Data[5] -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[6] -to ADC0_Data[6] -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[7] -to ADC0_Data[7] -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[8] -to ADC0_O_Data[0] -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[9] -to ADC0_O_Data[1] -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[10] -to ADC0_O_Data[2] -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[11] -to ADC0_O_Data[3] -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[12] -to ADC0_O_Data[4] -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[13] -to ADC0_O_Data[5] -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[14] -to ADC0_O_Data[6] -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[15] -to ADC0_O_Data[7] -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[16] -to ADC0_bg -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[0] -to ADC0_Data[0] -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[1] -to ADC0_Data[1] -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[2] -to ADC0_Data[2] -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[3] -to ADC0_Data[3] -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[4] -to ADC0_Data[4] -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[5] -to ADC0_Data[5] -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[6] -to ADC0_Data[6] -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[7] -to ADC0_Data[7] -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[8] -to ADC0_O_Data[0] -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[9] -to ADC0_O_Data[1] -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[10] -to ADC0_O_Data[2] -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[11] -to ADC0_O_Data[3] -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[12] -to ADC0_O_Data[4] -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[13] -to ADC0_O_Data[5] -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[14] -to ADC0_O_Data[6] -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[15] -to ADC0_O_Data[7] -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[16] -to ADC0_bg -section_id auto_signaltap_0
+set_location_assignment PIN_B6 -to ADC1_Clk
+set_location_assignment PIN_F9 -to ADC1_Data[7]
+set_location_assignment PIN_C6 -to ADC1_Data[6]
+set_location_assignment PIN_A5 -to ADC1_Data[5]
+set_location_assignment PIN_D5 -to ADC1_Data[4]
+set_location_assignment PIN_D6 -to ADC1_Data[3]
+set_location_assignment PIN_C3 -to ADC1_Data[2]
+set_location_assignment PIN_D4 -to ADC1_Data[1]
+set_location_assignment PIN_C2 -to ADC1_Data[0]
+set_location_assignment PIN_N13 -to ADC1_bg
+set_location_assignment PIN_K11 -to ADC1_O_Data[7]
+set_location_assignment PIN_J14 -to ADC1_O_Data[6]
+set_location_assignment PIN_J16 -to ADC1_O_Data[5]
+set_location_assignment PIN_J15 -to ADC1_O_Data[4]
+set_location_assignment PIN_K16 -to ADC1_O_Data[3]
+set_location_assignment PIN_K15 -to ADC1_O_Data[2]
+set_location_assignment PIN_L15 -to ADC1_O_Data[1]
+set_location_assignment PIN_J13 -to ADC1_O_Data[0]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to ADC0_bg
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to ADC1_Clk
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to ADC1_Data[7]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to ADC1_bg
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to ADC1_O_Data[0]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to ADC1_O_Data[1]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to ADC1_O_Data[2]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to ADC1_O_Data[3]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to ADC1_O_Data[4]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to ADC1_O_Data[5]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to ADC1_O_Data[6]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to ADC1_O_Data[7]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to ADC1_Data[0]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to ADC1_Data[1]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to ADC1_Data[2]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to ADC1_Data[3]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to ADC1_Data[4]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to ADC1_Data[5]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to ADC1_Data[6]
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[17] -to "ADC0_drive:ADC0_drive|ADC0_FIFO:ADC0_FIFO_inst|usedw[0]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[18] -to "ADC0_drive:ADC0_drive|ADC0_FIFO:ADC0_FIFO_inst|usedw[10]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[19] -to "ADC0_drive:ADC0_drive|ADC0_FIFO:ADC0_FIFO_inst|usedw[11]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[20] -to "ADC0_drive:ADC0_drive|ADC0_FIFO:ADC0_FIFO_inst|usedw[1]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[21] -to "ADC0_drive:ADC0_drive|ADC0_FIFO:ADC0_FIFO_inst|usedw[2]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[22] -to "ADC0_drive:ADC0_drive|ADC0_FIFO:ADC0_FIFO_inst|usedw[3]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[23] -to "ADC0_drive:ADC0_drive|ADC0_FIFO:ADC0_FIFO_inst|usedw[4]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[24] -to "ADC0_drive:ADC0_drive|ADC0_FIFO:ADC0_FIFO_inst|usedw[5]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[25] -to "ADC0_drive:ADC0_drive|ADC0_FIFO:ADC0_FIFO_inst|usedw[6]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[26] -to "ADC0_drive:ADC0_drive|ADC0_FIFO:ADC0_FIFO_inst|usedw[7]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[27] -to "ADC0_drive:ADC0_drive|ADC0_FIFO:ADC0_FIFO_inst|usedw[8]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[28] -to "ADC0_drive:ADC0_drive|ADC0_FIFO:ADC0_FIFO_inst|usedw[9]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[17] -to "ADC0_drive:ADC0_drive|ADC0_FIFO:ADC0_FIFO_inst|usedw[0]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[18] -to "ADC0_drive:ADC0_drive|ADC0_FIFO:ADC0_FIFO_inst|usedw[10]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[19] -to "ADC0_drive:ADC0_drive|ADC0_FIFO:ADC0_FIFO_inst|usedw[11]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[20] -to "ADC0_drive:ADC0_drive|ADC0_FIFO:ADC0_FIFO_inst|usedw[1]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[21] -to "ADC0_drive:ADC0_drive|ADC0_FIFO:ADC0_FIFO_inst|usedw[2]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[22] -to "ADC0_drive:ADC0_drive|ADC0_FIFO:ADC0_FIFO_inst|usedw[3]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[23] -to "ADC0_drive:ADC0_drive|ADC0_FIFO:ADC0_FIFO_inst|usedw[4]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[24] -to "ADC0_drive:ADC0_drive|ADC0_FIFO:ADC0_FIFO_inst|usedw[5]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[25] -to "ADC0_drive:ADC0_drive|ADC0_FIFO:ADC0_FIFO_inst|usedw[6]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[26] -to "ADC0_drive:ADC0_drive|ADC0_FIFO:ADC0_FIFO_inst|usedw[7]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[27] -to "ADC0_drive:ADC0_drive|ADC0_FIFO:ADC0_FIFO_inst|usedw[8]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[28] -to "ADC0_drive:ADC0_drive|ADC0_FIFO:ADC0_FIFO_inst|usedw[9]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[29] -to "ADC0_drive:ADC0_drive|ADC0_bg" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[30] -to "ADC0_drive:ADC0_drive|ADC0_end" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[31] -to "ADC0_drive:ADC0_drive|state.000" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[32] -to "ADC0_drive:ADC0_drive|state.001" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[33] -to "ADC0_drive:ADC0_drive|state.010" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[34] -to "ADC0_drive:ADC0_drive|state.011" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[35] -to "ADC0_drive:ADC0_drive|state.100" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[36] -to ADC0_rdreq -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[37] -to ADC1_Data[0] -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[38] -to ADC1_Data[1] -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[39] -to ADC1_Data[2] -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[40] -to ADC1_Data[3] -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[41] -to ADC1_Data[4] -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[42] -to ADC1_Data[5] -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[43] -to ADC1_Data[6] -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[44] -to ADC1_Data[7] -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[45] -to ADC1_O_Data[0] -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[46] -to ADC1_O_Data[1] -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[47] -to ADC1_O_Data[2] -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[48] -to ADC1_O_Data[3] -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[49] -to ADC1_O_Data[4] -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[50] -to ADC1_O_Data[5] -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[51] -to ADC1_O_Data[6] -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[52] -to ADC1_O_Data[7] -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[53] -to ADC1_bg -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[54] -to "ADC1_drive:ADC1_drive|ADC1_FIFO:ADC1_FIFO_inst|usedw[0]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[55] -to "ADC1_drive:ADC1_drive|ADC1_FIFO:ADC1_FIFO_inst|usedw[10]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[56] -to "ADC1_drive:ADC1_drive|ADC1_FIFO:ADC1_FIFO_inst|usedw[11]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[57] -to "ADC1_drive:ADC1_drive|ADC1_FIFO:ADC1_FIFO_inst|usedw[1]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[58] -to "ADC1_drive:ADC1_drive|ADC1_FIFO:ADC1_FIFO_inst|usedw[2]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[59] -to "ADC1_drive:ADC1_drive|ADC1_FIFO:ADC1_FIFO_inst|usedw[3]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[60] -to "ADC1_drive:ADC1_drive|ADC1_FIFO:ADC1_FIFO_inst|usedw[4]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[61] -to "ADC1_drive:ADC1_drive|ADC1_FIFO:ADC1_FIFO_inst|usedw[5]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[62] -to "ADC1_drive:ADC1_drive|ADC1_FIFO:ADC1_FIFO_inst|usedw[6]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[63] -to "ADC1_drive:ADC1_drive|ADC1_FIFO:ADC1_FIFO_inst|usedw[7]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[64] -to "ADC1_drive:ADC1_drive|ADC1_FIFO:ADC1_FIFO_inst|usedw[8]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[65] -to "ADC1_drive:ADC1_drive|ADC1_FIFO:ADC1_FIFO_inst|usedw[9]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[66] -to "ADC1_drive:ADC1_drive|ADC1_bg" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[67] -to "ADC1_drive:ADC1_drive|ADC1_end" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[68] -to "ADC1_drive:ADC1_drive|state.000" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[69] -to "ADC1_drive:ADC1_drive|state.001" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[70] -to "ADC1_drive:ADC1_drive|state.010" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[71] -to "ADC1_drive:ADC1_drive|state.011" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[72] -to "ADC1_drive:ADC1_drive|state.100" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[73] -to ADC1_rdreq -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[29] -to "ADC0_drive:ADC0_drive|ADC0_bg" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[30] -to "ADC0_drive:ADC0_drive|ADC0_end" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[31] -to "ADC0_drive:ADC0_drive|state.000" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[32] -to "ADC0_drive:ADC0_drive|state.001" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[33] -to "ADC0_drive:ADC0_drive|state.010" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[34] -to "ADC0_drive:ADC0_drive|state.011" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[35] -to "ADC0_drive:ADC0_drive|state.100" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[36] -to ADC0_rdreq -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[37] -to ADC1_Data[0] -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[38] -to ADC1_Data[1] -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[39] -to ADC1_Data[2] -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[40] -to ADC1_Data[3] -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[41] -to ADC1_Data[4] -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[42] -to ADC1_Data[5] -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[43] -to ADC1_Data[6] -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[44] -to ADC1_Data[7] -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[45] -to ADC1_O_Data[0] -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[46] -to ADC1_O_Data[1] -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[47] -to ADC1_O_Data[2] -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[48] -to ADC1_O_Data[3] -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[49] -to ADC1_O_Data[4] -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[50] -to ADC1_O_Data[5] -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[51] -to ADC1_O_Data[6] -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[52] -to ADC1_O_Data[7] -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[53] -to ADC1_bg -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[54] -to "ADC1_drive:ADC1_drive|ADC1_FIFO:ADC1_FIFO_inst|usedw[0]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[55] -to "ADC1_drive:ADC1_drive|ADC1_FIFO:ADC1_FIFO_inst|usedw[10]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[56] -to "ADC1_drive:ADC1_drive|ADC1_FIFO:ADC1_FIFO_inst|usedw[11]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[57] -to "ADC1_drive:ADC1_drive|ADC1_FIFO:ADC1_FIFO_inst|usedw[1]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[58] -to "ADC1_drive:ADC1_drive|ADC1_FIFO:ADC1_FIFO_inst|usedw[2]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[59] -to "ADC1_drive:ADC1_drive|ADC1_FIFO:ADC1_FIFO_inst|usedw[3]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[60] -to "ADC1_drive:ADC1_drive|ADC1_FIFO:ADC1_FIFO_inst|usedw[4]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[61] -to "ADC1_drive:ADC1_drive|ADC1_FIFO:ADC1_FIFO_inst|usedw[5]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[62] -to "ADC1_drive:ADC1_drive|ADC1_FIFO:ADC1_FIFO_inst|usedw[6]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[63] -to "ADC1_drive:ADC1_drive|ADC1_FIFO:ADC1_FIFO_inst|usedw[7]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[64] -to "ADC1_drive:ADC1_drive|ADC1_FIFO:ADC1_FIFO_inst|usedw[8]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[65] -to "ADC1_drive:ADC1_drive|ADC1_FIFO:ADC1_FIFO_inst|usedw[9]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[66] -to "ADC1_drive:ADC1_drive|ADC1_bg" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[67] -to "ADC1_drive:ADC1_drive|ADC1_end" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[68] -to "ADC1_drive:ADC1_drive|state.000" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[69] -to "ADC1_drive:ADC1_drive|state.001" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[70] -to "ADC1_drive:ADC1_drive|state.010" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[71] -to "ADC1_drive:ADC1_drive|state.011" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[72] -to "ADC1_drive:ADC1_drive|state.100" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[73] -to ADC1_rdreq -section_id auto_signaltap_0
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_DATA_BITS=74" -section_id auto_signaltap_0
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_TRIGGER_BITS=74" -section_id auto_signaltap_0
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_INVERSION_MASK=0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000" -section_id auto_signaltap_0
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_INVERSION_MASK_LENGTH=247" -section_id auto_signaltap_0
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_NODE_CRC_LOWORD=34022" -section_id auto_signaltap_0
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_NODE_CRC_HIWORD=20850" -section_id auto_signaltap_0
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
 set_global_assignment -name SLD_FILE "E:/Graduation Design/mutil-channel-oscilloscope/FPGA_control/stp1_auto_stripped.stp"

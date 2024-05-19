@@ -1,16 +1,16 @@
-Fitter Status : Successful - Sat May 18 03:46:59 2024
+Fitter Status : Successful - Sun May 19 01:13:55 2024
 Quartus II 64-Bit Version : 13.0.0 Build 156 04/24/2013 SJ Full Version
 Revision Name : FPGA_control
 Top-level Entity Name : FPGA_control
 Family : Cyclone IV E
 Device : EP4CE10F17C8
 Timing Models : Final
-Total logic elements : 1,364 / 10,320 ( 13 % )
-    Total combinational functions : 703 / 10,320 ( 7 % )
-    Dedicated logic registers : 1,144 / 10,320 ( 11 % )
-Total registers : 1144
-Total pins : 24 / 180 ( 13 % )
+Total logic elements : 1,667 / 10,320 ( 16 % )
+    Total combinational functions : 871 / 10,320 ( 8 % )
+    Dedicated logic registers : 1,386 / 10,320 ( 13 % )
+Total registers : 1386
+Total pins : 38 / 180 ( 21 % )
 Total virtual pins : 0
-Total memory bits : 161,792 / 423,936 ( 38 % )
+Total memory bits : 217,088 / 423,936 ( 51 % )
 Embedded Multiplier 9-bit elements : 0 / 46 ( 0 % )
 Total PLLs : 0 / 2 ( 0 % )

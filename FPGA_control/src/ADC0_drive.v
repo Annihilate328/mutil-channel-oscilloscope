@@ -1,13 +1,13 @@
 module ADC0_drive(
 	input Clk,
 	input Reset_n,
-	input [9:0] AD_Data,
-	input [9:0] Trigger,
+	input [7:0] AD_Data,
+	input [7:0] Trigger,
 	input ADC0_bg,
 	input rdreq,
 	output reg ADC0_end,
 	output empty,
-	output [9:0] ADC0_F_O_Data
+	output [7:0] ADC0_F_O_Data
 );
 	reg wrreq;
 	reg sclr;
