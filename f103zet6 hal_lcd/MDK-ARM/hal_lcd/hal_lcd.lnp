@@ -1,0 +1,28 @@
+--cpu Cortex-M3
+"hal_lcd\startup_stm32f103xe.o"
+"hal_lcd\main.o"
+"hal_lcd\gpio.o"
+"hal_lcd\fsmc.o"
+"hal_lcd\stm32f1xx_it.o"
+"hal_lcd\stm32f1xx_hal_msp.o"
+"hal_lcd\system_stm32f1xx.o"
+"hal_lcd\lcd.o"
+"hal_lcd\stm32f1xx_hal_gpio_ex.o"
+"hal_lcd\stm32f1xx_ll_fsmc.o"
+"hal_lcd\stm32f1xx_hal.o"
+"hal_lcd\stm32f1xx_hal_rcc.o"
+"hal_lcd\stm32f1xx_hal_rcc_ex.o"
+"hal_lcd\stm32f1xx_hal_gpio.o"
+"hal_lcd\stm32f1xx_hal_dma.o"
+"hal_lcd\stm32f1xx_hal_cortex.o"
+"hal_lcd\stm32f1xx_hal_pwr.o"
+"hal_lcd\stm32f1xx_hal_flash.o"
+"hal_lcd\stm32f1xx_hal_flash_ex.o"
+"hal_lcd\stm32f1xx_hal_exti.o"
+"hal_lcd\stm32f1xx_hal_sram.o"
+"hal_lcd\stm32f1xx_hal_tim.o"
+"hal_lcd\stm32f1xx_hal_tim_ex.o"
+--library_type=microlib --strict --scatter "hal_lcd\hal_lcd.sct"
+--summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list "hal_lcd.map" -o hal_lcd\hal_lcd.axf

@@ -1,6 +1,6 @@
 <sld_project_info>
   <project>
-    <hash md5_digest_80b="4dc23e5a339411b732c0"/>
+    <hash md5_digest_80b="483e895e60e995366448"/>
   </project>
   <file_info>
     <file device="EP4CE10F17C8" path="FPGA_control.sof" usercode="0xFFFFFFFF"/>
@@ -14,11 +14,11 @@
         <parameter name="SLD_IP_VERSION" type="dec" value="6"/>
         <parameter name="SLD_IP_MINOR_VERSION" type="dec" value="0"/>
         <parameter name="SLD_COMMON_IP_VERSION" type="dec" value="0"/>
-        <parameter name="sld_data_bits" type="unknown" value="74"/>
-        <parameter name="sld_trigger_bits" type="unknown" value="74"/>
+        <parameter name="sld_data_bits" type="unknown" value="60"/>
+        <parameter name="sld_trigger_bits" type="unknown" value="60"/>
         <parameter name="SLD_NODE_CRC_BITS" type="dec" value="32"/>
-        <parameter name="sld_node_crc_hiword" type="unknown" value="20850"/>
-        <parameter name="sld_node_crc_loword" type="unknown" value="34022"/>
+        <parameter name="sld_node_crc_hiword" type="unknown" value="14720"/>
+        <parameter name="sld_node_crc_loword" type="unknown" value="32282"/>
         <parameter name="SLD_INCREMENTAL_ROUTING" type="dec" value="0"/>
         <parameter name="sld_sample_depth" type="unknown" value="2048"/>
         <parameter name="sld_segment_size" type="unknown" value="2048"/>
@@ -46,8 +46,8 @@
         <parameter name="SLD_ADVANCED_TRIGGER_8" type="string" value="NONE"/>
         <parameter name="SLD_ADVANCED_TRIGGER_9" type="string" value="NONE"/>
         <parameter name="SLD_ADVANCED_TRIGGER_10" type="string" value="NONE"/>
-        <parameter name="sld_inversion_mask_length" type="unknown" value="247"/>
-        <parameter name="sld_inversion_mask" type="unknown" value="0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"/>
+        <parameter name="sld_inversion_mask_length" type="unknown" value="205"/>
+        <parameter name="sld_inversion_mask" type="unknown" value="0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"/>
         <parameter name="sld_power_up_trigger" type="unknown" value="0"/>
         <parameter name="SLD_STATE_FLOW_MGR_ENTITY" type="string" value="state_flow_mgr_entity.vhd"/>
         <parameter name="sld_state_flow_use_generated" type="unknown" value="0"/>

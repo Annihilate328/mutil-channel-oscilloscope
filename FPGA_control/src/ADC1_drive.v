@@ -26,7 +26,7 @@ module ADC1_drive(
 		.usedw()
 	);
 
-	reg [12:0] count;
+	reg [13:0] count;
 	reg [2:0] state;
 	reg Tri;
 
@@ -36,7 +36,7 @@ module ADC1_drive(
 			ADC1_end <= 0;
 		end else begin
 			if (count <= 5130) begin
-				count <= count + 1;
+				count <= count + 1'd1;
 				if (count >8 && count <1033 && Tri == 1) begin
 					count <= 13'd1033;
 				end
@@ -46,10 +46,6 @@ module ADC1_drive(
 				count <= 13'd0;
 				ADC1_end <= 0;
 			end 
-//			else if (count > 5130 && empty == 1) begin
-//				ADC0_end <= 0;
-//			end 
-			
 		end
 	end
 

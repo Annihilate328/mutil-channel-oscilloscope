@@ -1,0 +1,49 @@
+Sun May 19 17:35:36 CST 2024  [debug] AvalonLogSystem initialized using logfile 'velocity.log'
+Sun May 19 17:35:36 CST 2024   [info] ************************************************************** 
+Sun May 19 17:35:36 CST 2024   [info] Starting Jakarta Velocity v1.4
+Sun May 19 17:35:36 CST 2024   [info] RuntimeInstance initializing.
+Sun May 19 17:35:36 CST 2024   [info] Default Properties File: org\apache\velocity\runtime\defaults\velocity.properties
+Sun May 19 17:35:36 CST 2024   [info] Trying to use logger class org.apache.velocity.runtime.log.AvalonLogSystem
+Sun May 19 17:35:36 CST 2024   [info] Using logger class org.apache.velocity.runtime.log.AvalonLogSystem
+Sun May 19 17:35:36 CST 2024   [info] Default ResourceManager initializing. (class org.apache.velocity.runtime.resource.ResourceManagerImpl)
+Sun May 19 17:35:36 CST 2024   [info] Resource Loader Instantiated: org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Sun May 19 17:35:36 CST 2024   [info] FileResourceLoader : initialization starting.
+Sun May 19 17:35:36 CST 2024   [info] FileResourceLoader : adding path 'e:/quartus ii 13/ip/altera/fft/lib/\template'
+Sun May 19 17:35:36 CST 2024   [info] FileResourceLoader : adding path '.'
+Sun May 19 17:35:36 CST 2024   [info] FileResourceLoader : initialization complete.
+Sun May 19 17:35:36 CST 2024   [info] Resource Loader Instantiated: org.apache.velocity.runtime.resource.loader.JarResourceLoader
+Sun May 19 17:35:36 CST 2024   [info] JarResourceLoader : initialization starting.
+Sun May 19 17:35:36 CST 2024   [info] JarResourceLoader # of paths : 0
+Sun May 19 17:35:36 CST 2024   [info] JarResourceLoader : initialization complete.
+Sun May 19 17:35:36 CST 2024   [info] Resource Loader Instantiated: org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+Sun May 19 17:35:36 CST 2024   [info] ClasspathResourceLoader : initialization starting.
+Sun May 19 17:35:36 CST 2024   [info] ClasspathResourceLoader : initialization complete.
+Sun May 19 17:35:36 CST 2024   [info] ResourceCache : initialized. (class org.apache.velocity.runtime.resource.ResourceCacheImpl)
+Sun May 19 17:35:36 CST 2024   [info] Default ResourceManager initialization complete.
+Sun May 19 17:35:36 CST 2024   [info] Loaded System Directive: org.apache.velocity.runtime.directive.Literal
+Sun May 19 17:35:36 CST 2024   [info] Loaded System Directive: org.apache.velocity.runtime.directive.Macro
+Sun May 19 17:35:36 CST 2024   [info] Loaded System Directive: org.apache.velocity.runtime.directive.Parse
+Sun May 19 17:35:36 CST 2024   [info] Loaded System Directive: org.apache.velocity.runtime.directive.Include
+Sun May 19 17:35:36 CST 2024   [info] Loaded System Directive: org.apache.velocity.runtime.directive.Foreach
+Sun May 19 17:35:36 CST 2024   [info] Created: 20 parsers.
+Sun May 19 17:35:36 CST 2024   [info] Velocimacro : initialization starting.
+Sun May 19 17:35:36 CST 2024   [info] Velocimacro : adding VMs from VM library template : VM_global_library.vm
+Sun May 19 17:35:36 CST 2024   [info] Velocimacro : added new VM : #listall( list ) : source = VM_global_library.vm
+Sun May 19 17:35:36 CST 2024   [info] Velocimacro : added new VM : #listlist( list ) : source = VM_global_library.vm
+Sun May 19 17:35:36 CST 2024   [info] ResourceManager : found VM_global_library.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+Sun May 19 17:35:36 CST 2024   [info] Velocimacro :  VM library template macro registration complete.
+Sun May 19 17:35:36 CST 2024   [info] Velocimacro : allowInline = true : VMs can be defined inline in templates
+Sun May 19 17:35:36 CST 2024   [info] Velocimacro : allowInlineToOverride = false : VMs defined inline may NOT replace previous VM definitions
+Sun May 19 17:35:36 CST 2024   [info] Velocimacro : allowInlineLocal = false : VMs defined inline will be  global in scope if allowed.
+Sun May 19 17:35:36 CST 2024   [info] Velocimacro : messages on  : VM system will output logging messages
+Sun May 19 17:35:36 CST 2024   [info] Velocimacro : autoload off  : VM system will not automatically reload global library macros
+Sun May 19 17:35:36 CST 2024   [info] Velocimacro : initialization complete.
+Sun May 19 17:35:36 CST 2024   [info] Velocity successfully started.
+Sun May 19 17:35:36 CST 2024   [info] ResourceManager : found fft_top_vhdl_tb.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+Sun May 19 17:35:36 CST 2024   [info] ResourceManager : found alt_license.txt with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+Sun May 19 17:35:36 CST 2024   [info] ResourceManager : found fft_top_verilog_tb.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+Sun May 19 17:35:36 CST 2024   [info] ResourceManager : found alt_license_verilog.txt with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+Sun May 19 17:35:36 CST 2024   [info] ResourceManager : found matlab_tb.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+Sun May 19 17:35:36 CST 2024   [info] ResourceManager : found matlab_model.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+Sun May 19 17:35:36 CST 2024   [info] ResourceManager : found set_nativelink_tcl.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+Sun May 19 17:35:36 CST 2024   [info] ResourceManager : found alt_license_tcl.txt with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader

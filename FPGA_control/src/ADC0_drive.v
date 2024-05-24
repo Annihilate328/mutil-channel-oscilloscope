@@ -5,6 +5,7 @@ module ADC0_drive(
 	input [7:0] Trigger,
 	input ADC0_bg,
 	input rdreq,
+	input wdclk,
 	output reg ADC0_end,
 	output empty,
 	output [7:0] ADC0_F_O_Data
@@ -15,7 +16,8 @@ module ADC0_drive(
 	
 	// 实例化 ADC0_FIFO
 	ADC0_FIFO ADC0_FIFO_inst(
-		.clock(Clk),
+		.rdclk(Clk),
+		.wdclk(wdclk)
 		.data(AD_Data),
 		.rdreq(rdreq),
 		.sclr(sclr),
@@ -26,7 +28,7 @@ module ADC0_drive(
 		.usedw()
 	);
 
-	reg [12:0] count;
+	reg [13:0] count;
 	reg [2:0] state;
 	reg Tri;
 
@@ -36,7 +38,7 @@ module ADC0_drive(
 			ADC0_end <= 0;
 		end else begin
 			if (count <= 5130) begin
-				count <= count + 1;
+				count <= count + 1'd1;
 				if (count >8 && count <1033 && Tri == 1) begin
 					count <= 13'd1033;
 				end
@@ -46,10 +48,6 @@ module ADC0_drive(
 				count <= 13'd0;
 				ADC0_end <= 0;
 			end 
-//			else if (count > 5130 && empty == 1) begin
-//				ADC0_end <= 0;
-//			end 
-			
 		end
 	end
 
