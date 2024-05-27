@@ -56,7 +56,7 @@ void SystemClock_Config(void);
 
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
-
+uint16_t FIFO00[601],FIFO01[601];
 /* USER CODE END 0 */
 
 /**
@@ -65,8 +65,9 @@ void SystemClock_Config(void);
   */
 int main(void)
 {
-  /* USER CODE BEGIN 1 */
 
+  /* USER CODE BEGIN 1 */
+	uint16_t i,mid,mid1;
   /* USER CODE END 1 */
 
   /* MCU Configuration--------------------------------------------------------*/
@@ -89,12 +90,36 @@ int main(void)
   MX_GPIO_Init();
   MX_FSMC_Init();
   /* USER CODE BEGIN 2 */
-  LCD_Init();
+	LCD_Init();
 	LCD_Display_Dir(1);
-	POINT_COLOR =RED;
-  HAL_GPIO_WritePin(LCD_BL_GPIO_Port, LCD_BL_Pin, 1);
-	LCD_Clear(WHITE);
-	LCD_ShowString(30,90,200,16,16,"ATOM@ALIENTEK");
+	HAL_GPIO_WritePin(LCD_BL_GPIO_Port, LCD_BL_Pin,GPIO_PIN_SET);
+	LCD_Fill(0,0,600,480,0x0000);
+	POINT_COLOR =WHITE;
+	LCD_DrawLine(0,240,600,240);
+	LCD_DrawLine(300,0,300,480);
+	POINT_COLOR =GRAY;
+	LCD_DrawLine(0,420,600,420);
+	LCD_DrawLine(0,360,600,360);
+	LCD_DrawLine(0,300,600,300);
+	LCD_DrawLine(0,180,600,180);
+	LCD_DrawLine(0,120,600,120);
+	LCD_DrawLine(0,60,600,60);
+	
+	LCD_DrawLine(540,0,540,480);
+	LCD_DrawLine(480,0,480,480);
+	LCD_DrawLine(420,0,420,480);
+	LCD_DrawLine(360,0,360,480);
+	LCD_DrawLine(240,0,240,480);
+	LCD_DrawLine(180,0,180,480);
+	LCD_DrawLine(120,0,120,480);
+	LCD_DrawLine(60,0,60,480);
+//	POINT_COLOR =RED;
+//	LCD_ShowString(620,0,240,24,24,"Frequency:");
+//	LCD_ShowString(620,30,240,24,24,"499.85KHz");
+//	LCD_ShowString(620,60,240,24,24,"V+max:");
+//	LCD_ShowString(620,90,240,24,24,"+495mV");
+//	LCD_ShowString(620,120,240,24,24,"V-max:");
+//	LCD_ShowString(620,150,240,24,24,"-496mV");
   /* USER CODE END 2 */
 
   /* Infinite loop */
@@ -104,7 +129,80 @@ int main(void)
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
-  }
+		POINT_COLOR =WHITE;
+		LCD_DrawLine(0,240,600,240);
+		LCD_DrawLine(300,0,300,480);
+		HAL_GPIO_WritePin(GPIOG,GPIO_PIN_6,GPIO_PIN_SET);
+		HAL_GPIO_WritePin(GPIOG,GPIO_PIN_7,GPIO_PIN_SET);
+		POINT_COLOR =GRAY;
+		LCD_DrawLine(0,420,600,420);
+		LCD_DrawLine(0,360,600,360);
+		LCD_DrawLine(0,300,600,300);
+		LCD_DrawLine(0,180,600,180);
+		LCD_DrawLine(0,120,600,120);
+		LCD_DrawLine(0,60,600,60);
+	
+		LCD_DrawLine(540,0,540,480);
+		LCD_DrawLine(480,0,480,480);
+		LCD_DrawLine(420,0,420,480);
+		LCD_DrawLine(360,0,360,480);
+		LCD_DrawLine(240,0,240,480);
+		LCD_DrawLine(180,0,180,480);
+		LCD_DrawLine(120,0,120,480);
+		LCD_DrawLine(60,0,60,480);
+		
+		HAL_GPIO_WritePin(GPIOC,GPIO_PIN_6,GPIO_PIN_RESET);
+		HAL_GPIO_WritePin(GPIOG,GPIO_PIN_8,GPIO_PIN_RESET);
+		mid=FIFO00[1];
+		for(i=0;i<601;i++){
+			if(i>=3){
+				POINT_COLOR =BLACK;
+				LCD_DrawLine(i-2,mid*2,i-1,FIFO00[i]*2);
+			}
+			mid=FIFO00[i];
+			HAL_GPIO_WritePin(GPIOB,GPIO_PIN_12,GPIO_PIN_SET);
+			FIFO00[i]=HAL_GPIO_ReadPin(GPIOB, GPIO_PIN_13)*128;
+			FIFO00[i]=FIFO00[i]+HAL_GPIO_ReadPin(GPIOB, GPIO_PIN_14)*64;
+			FIFO00[i]=FIFO00[i]+HAL_GPIO_ReadPin(GPIOB, GPIO_PIN_15)*32;
+			FIFO00[i]=FIFO00[i]+HAL_GPIO_ReadPin(GPIOD, GPIO_PIN_11)*16;
+			HAL_GPIO_WritePin(GPIOB,GPIO_PIN_12,GPIO_PIN_RESET);
+			FIFO00[i]=FIFO00[i]+HAL_GPIO_ReadPin(GPIOD, GPIO_PIN_12)*8;
+			FIFO00[i]=FIFO00[i]+HAL_GPIO_ReadPin(GPIOD, GPIO_PIN_13)*4;
+			FIFO00[i]=FIFO00[i]+HAL_GPIO_ReadPin(GPIOG, GPIO_PIN_2)*2;
+			FIFO00[i]=FIFO00[i]+HAL_GPIO_ReadPin(GPIOG, GPIO_PIN_3)*1;
+			if(FIFO00[i]==480 || FIFO00[i] == 0) FIFO00[i]=FIFO00[i-1];
+			if(i>=3){
+				POINT_COLOR =RED;
+				LCD_DrawLine(i-2,FIFO00[i-1]*2,i-1,FIFO00[i]*2);
+			}
+		}
+
+		HAL_GPIO_WritePin(GPIOC,GPIO_PIN_6,GPIO_PIN_RESET);
+		HAL_GPIO_WritePin(GPIOG,GPIO_PIN_8,GPIO_PIN_SET);
+		for(i=0;i<601;i++){
+			if(i>=2){
+				POINT_COLOR =BLACK;
+				LCD_DrawLine(i-2,mid*2,i-1,FIFO01[i]*2);
+			}
+			mid=FIFO01[i];
+			HAL_GPIO_WritePin(GPIOB,GPIO_PIN_12,GPIO_PIN_SET);
+			FIFO01[i]=HAL_GPIO_ReadPin(GPIOB, GPIO_PIN_13)*128;
+			FIFO01[i]=FIFO01[i]+HAL_GPIO_ReadPin(GPIOB, GPIO_PIN_14)*64;
+			FIFO01[i]=FIFO01[i]+HAL_GPIO_ReadPin(GPIOB, GPIO_PIN_15)*32;
+			FIFO01[i]=FIFO01[i]+HAL_GPIO_ReadPin(GPIOD, GPIO_PIN_11)*16;
+			HAL_GPIO_WritePin(GPIOB,GPIO_PIN_12,GPIO_PIN_RESET);
+			FIFO01[i]=FIFO01[i]+HAL_GPIO_ReadPin(GPIOD, GPIO_PIN_12)*8;
+			FIFO01[i]=FIFO01[i]+HAL_GPIO_ReadPin(GPIOD, GPIO_PIN_13)*4;
+			FIFO01[i]=FIFO01[i]+HAL_GPIO_ReadPin(GPIOG, GPIO_PIN_2)*2;
+			FIFO01[i]=FIFO01[i]+HAL_GPIO_ReadPin(GPIOG, GPIO_PIN_3)*1;
+			if(i>=2){
+				POINT_COLOR =GREEN;
+				LCD_DrawLine(i-2,FIFO01[i-1]*2,i-1,FIFO01[i]*2);
+			}
+		}
+		HAL_GPIO_WritePin(GPIOG,GPIO_PIN_6,GPIO_PIN_RESET);
+		HAL_GPIO_WritePin(GPIOG,GPIO_PIN_7,GPIO_PIN_RESET);
+	}
   /* USER CODE END 3 */
 }
 
@@ -131,6 +229,7 @@ void SystemClock_Config(void)
   {
     Error_Handler();
   }
+
   /** Initializes the CPU, AHB and APB buses clocks
   */
   RCC_ClkInitStruct.ClockType = RCC_CLOCKTYPE_HCLK|RCC_CLOCKTYPE_SYSCLK
@@ -144,6 +243,7 @@ void SystemClock_Config(void)
   {
     Error_Handler();
   }
+
   /** Enables the Clock Security System
   */
   HAL_RCC_EnableCSS();
@@ -184,5 +284,3 @@ void assert_failed(uint8_t *file, uint32_t line)
   /* USER CODE END 6 */
 }
 #endif /* USE_FULL_ASSERT */
-
-/************************ (C) COPYRIGHT STMicroelectronics *****END OF FILE****/

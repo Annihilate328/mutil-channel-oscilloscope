@@ -1,0 +1,14 @@
+Partition Merge Status : Successful - Sun May 26 23:03:07 2024
+Quartus II 64-Bit Version : 13.0.0 Build 156 04/24/2013 SJ Full Version
+Revision Name : FPGA_control
+Top-level Entity Name : FPGA_control
+Family : Cyclone IV E
+Total logic elements : 4,632
+    Total combinational functions : 3,115
+    Dedicated logic registers : 3,812
+Total registers : 3812
+Total pins : 49
+Total virtual pins : 0
+Total memory bits : 299,136
+Embedded Multiplier 9-bit elements : 12
+Total PLLs : 0

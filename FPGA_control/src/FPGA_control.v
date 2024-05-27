@@ -8,9 +8,8 @@ module FPGA_control(
     input ADC0_bg,
     input ADC1_bg,
     input [1:0] ADC_FIFO_O_EN,
-	 input FFT_EN,
-	 input [1:0] FFT_I_EN,
-	 output reg FFT_BG,
+	 
+	 input FIFO_Clk,
     output wire ADC0_Clk,
     output wire ADC1_Clk,
 	 output wire [7:0] FFT_O_real,
@@ -32,10 +31,10 @@ module FPGA_control(
 	// Instantiate ADC0_drive
 	ADC0_drive ADC0_drive(
 		.Clk(ADC0_Clk),
-		.wdclk()
+		.rdclk(FIFO_Clk),
 		.Reset_n(Reset_n),
 		.AD_Data(ADC0_Data),
-		.Trigger(8'd50),
+		.Trigger(8'd160),
 		.ADC0_bg(ADC0_bg),
 		.ADC0_end(ADC0_end),
 		.rdreq(ADC0_rdreq),
@@ -46,9 +45,10 @@ module FPGA_control(
     // Instantiate ADC1_drive
 	ADC1_drive ADC1_drive(
 		.Clk(ADC1_Clk),
+		.rdclk(FIFO_Clk),
 		.Reset_n(Reset_n),
 		.AD_Data(ADC1_Data),
-		.Trigger(8'd50),
+		.Trigger(8'd160),
 		.ADC1_bg(ADC1_bg),
 		.ADC1_end(ADC1_end),
 		.rdreq(ADC1_rdreq),
@@ -68,22 +68,29 @@ module FPGA_control(
 		if (!Reset_n) begin
 			ADC0_rdreq <= 0;
 			ADC1_rdreq <= 0;
-			ADC_FIFO_Data <= 8'b0;
 		end else begin
-			if (ADC0_end && !ADC0_empty && (ADC_FIFO_O_EN == 2'b00)) begin
-				ADC_FIFO_Data <= ADC0_FIFO_O;
+			if (ADC0_end && (ADC_FIFO_O_EN == 2'b00)) begin
+				ADC1_rdreq <= 0;
 				ADC0_rdreq <= 1;
-			end else begin
+			end else if (ADC1_end && (ADC_FIFO_O_EN == 2'b01)) begin
 				ADC0_rdreq <= 0;
-			end
-			if (ADC1_end && !ADC1_empty && (ADC_FIFO_O_EN == 2'b01)) begin
-				ADC_FIFO_Data <= ADC1_FIFO_O;
 				ADC1_rdreq <= 1;
 			end else begin
 				ADC1_rdreq <= 0;
+				ADC0_rdreq <= 0;
 			end
 		end
 	end
+	always @(posedge Clk or negedge Reset_n)begin
+		if (!Reset_n) begin
+			ADC_FIFO_Data <= 8'b0;
+		end else begin
+			if(ADC0_rdreq == 1) ADC_FIFO_Data <= ADC0_FIFO_O;
+			else if(ADC1_rdreq == 1) ADC_FIFO_Data <= ADC1_FIFO_O;
+			else ADC_FIFO_Data <= 0;
+		end
+	end
+
 //	if(FFT_EN == 1 && FFT_I_EN == 1 && sink_valid == 1)
 //			sink_real <= ADC1_FIFO_O;
 //	if(FFT_EN == 1 && FFT_I_EN == 0 && sink_valid == 1)
@@ -96,12 +103,12 @@ module FPGA_control(
 			sink_valid <=0;
 			sink_sop <= 0;
 		end else begin
-			if(FFT_EN == 1 && FFT_cnt !=1023)begin
+			if(FFT_cnt !=1023)begin
 //				if(FFT_cnt == 0)begin
 					FFT_cnt <= FFT_cnt + 1'd1;
 					sink_valid <= 1;
 					sink_sop <= 0;
-			end else if(FFT_EN == 1 && FFT_cnt == 1023)begin
+			end else if(FFT_cnt == 1023)begin
 //				sink_valid <= 0;
 				FFT_cnt <= 0;
 				sink_sop <= 1;
@@ -128,10 +135,6 @@ module FPGA_control(
 	always@(posedge Clk)begin
 		if(source_valid == 1)begin
 			source_ready <= 1;
-			if(source_sop == 1)
-				FFT_BG <= 1;
-		end else if(source_valid == 0)begin
-			FFT_BG <= 0;
 		end
 	end
 	wire source_sop;

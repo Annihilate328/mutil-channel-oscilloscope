@@ -1,5 +1,5 @@
 EDA Netlist Writer report for FPGA_control
-Wed May 22 16:54:58 2024
+Mon May 27 03:25:47 2024
 Quartus II 64-Bit Version 13.0.0 Build 156 04/24/2013 SJ Full Version
 
 
@@ -36,7 +36,7 @@ applicable agreement for further details.
 +-------------------------------------------------------------------+
 ; EDA Netlist Writer Summary                                        ;
 +---------------------------+---------------------------------------+
-; EDA Netlist Writer Status ; Successful - Wed May 22 16:54:58 2024 ;
+; EDA Netlist Writer Status ; Successful - Mon May 27 03:25:47 2024 ;
 ; Revision Name             ; FPGA_control                          ;
 ; Top-level Entity Name     ; FPGA_control                          ;
 ; Family                    ; Cyclone IV E                          ;
@@ -88,7 +88,7 @@ applicable agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit EDA Netlist Writer
     Info: Version 13.0.0 Build 156 04/24/2013 SJ Full Version
-    Info: Processing started: Wed May 22 16:54:52 2024
+    Info: Processing started: Mon May 27 03:25:41 2024
 Info: Command: quartus_eda --read_settings_files=off --write_settings_files=off FPGA_control -c FPGA_control
 Info (204019): Generated file FPGA_control_8_1200mv_85c_slow.vo in folder "E:/Graduation Design/mutil-channel-oscilloscope/FPGA_control/simulation/modelsim/" for EDA simulation tool
 Info (204019): Generated file FPGA_control_8_1200mv_0c_slow.vo in folder "E:/Graduation Design/mutil-channel-oscilloscope/FPGA_control/simulation/modelsim/" for EDA simulation tool
@@ -99,8 +99,8 @@ Info (204019): Generated file FPGA_control_8_1200mv_0c_v_slow.sdo in folder "E:/
 Info (204019): Generated file FPGA_control_min_1200mv_0c_v_fast.sdo in folder "E:/Graduation Design/mutil-channel-oscilloscope/FPGA_control/simulation/modelsim/" for EDA simulation tool
 Info (204019): Generated file FPGA_control_v.sdo in folder "E:/Graduation Design/mutil-channel-oscilloscope/FPGA_control/simulation/modelsim/" for EDA simulation tool
 Info: Quartus II 64-Bit EDA Netlist Writer was successful. 0 errors, 0 warnings
-    Info: Peak virtual memory: 4597 megabytes
-    Info: Processing ended: Wed May 22 16:54:58 2024
+    Info: Peak virtual memory: 4603 megabytes
+    Info: Processing ended: Mon May 27 03:25:47 2024
     Info: Elapsed time: 00:00:06
     Info: Total CPU time (on all processors): 00:00:05
 

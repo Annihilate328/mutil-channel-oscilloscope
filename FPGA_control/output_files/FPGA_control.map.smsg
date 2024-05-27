@@ -1,1 +1,1 @@
-Info (10281): Verilog HDL Declaration information at ADC0_drive.v(2): object "Clk" differs only in case from object "CLK" in the same scope
+Warning (10268): Verilog HDL information at ADC0_drive.v(70): always construct contains both blocking and non-blocking assignments
