@@ -30,7 +30,7 @@ module FPGA_control(
 
 	// Instantiate ADC0_drive
 	ADC0_drive ADC0_drive(
-		.Clk(ADC0_Clk),
+		.Clk(Clk),
 		.rdclk(FIFO_Clk),
 		.Reset_n(Reset_n),
 		.AD_Data(ADC0_Data),
@@ -44,7 +44,7 @@ module FPGA_control(
 
     // Instantiate ADC1_drive
 	ADC1_drive ADC1_drive(
-		.Clk(ADC1_Clk),
+		.Clk(Clk),
 		.rdclk(FIFO_Clk),
 		.Reset_n(Reset_n),
 		.AD_Data(ADC1_Data),

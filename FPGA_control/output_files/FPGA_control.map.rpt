@@ -1,5 +1,5 @@
 Analysis & Synthesis report for FPGA_control
-Mon May 27 03:25:18 2024
+Tue May 28 00:53:16 2024
 Quartus II 64-Bit Version 13.0.0 Build 156 04/24/2013 SJ Full Version
 
 
@@ -94,13 +94,13 @@ applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Mon May 27 03:25:17 2024       ;
+; Analysis & Synthesis Status        ; Successful - Tue May 28 00:53:16 2024       ;
 ; Quartus II 64-Bit Version          ; 13.0.0 Build 156 04/24/2013 SJ Full Version ;
 ; Revision Name                      ; FPGA_control                                ;
 ; Top-level Entity Name              ; FPGA_control                                ;
 ; Family                             ; Cyclone IV E                                ;
-; Total logic elements               ; 4,363                                       ;
-;     Total combinational functions  ; 3,026                                       ;
+; Total logic elements               ; 4,362                                       ;
+;     Total combinational functions  ; 3,025                                       ;
 ;     Dedicated logic registers      ; 3,541                                       ;
 ; Total registers                    ; 3541                                        ;
 ; Total pins                         ; 49                                          ;
@@ -370,16 +370,16 @@ applicable agreement for further details.
 +---------------------------------------------+-----------+
 ; Resource                                    ; Usage     ;
 +---------------------------------------------+-----------+
-; Estimated Total logic elements              ; 4,363     ;
+; Estimated Total logic elements              ; 4,362     ;
 ;                                             ;           ;
-; Total combinational functions               ; 3026      ;
+; Total combinational functions               ; 3025      ;
 ; Logic element usage by number of LUT inputs ;           ;
-;     -- 4 input functions                    ; 786       ;
-;     -- 3 input functions                    ; 1166      ;
+;     -- 4 input functions                    ; 782       ;
+;     -- 3 input functions                    ; 1169      ;
 ;     -- <=2 input functions                  ; 1074      ;
 ;                                             ;           ;
 ; Logic elements by mode                      ;           ;
-;     -- normal mode                          ; 2336      ;
+;     -- normal mode                          ; 2335      ;
 ;     -- arithmetic mode                      ; 690       ;
 ;                                             ;           ;
 ; Total registers                             ; 3541      ;
@@ -391,7 +391,7 @@ applicable agreement for further details.
 ; Embedded Multiplier 9-bit elements          ; 12        ;
 ; Maximum fan-out node                        ; Clk~input ;
 ; Maximum fan-out                             ; 3560      ;
-; Total fan-out                               ; 27486     ;
+; Total fan-out                               ; 27479     ;
 ; Average fan-out                             ; 3.90      ;
 +---------------------------------------------+-----------+
 
@@ -401,7 +401,7 @@ applicable agreement for further details.
 +-----------------------------------------------------------------------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------+
 ; Compilation Hierarchy Node                                                                                      ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                                                                                                                                                                                                                                ; Library Name ;
 +-----------------------------------------------------------------------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------+
-; |FPGA_control                                                                                                   ; 3026 (27)         ; 3541 (23)    ; 176256      ; 12           ; 12      ; 0         ; 49   ; 0            ; |FPGA_control                                                                                                                                                                                                                                                                                                                                      ;              ;
+; |FPGA_control                                                                                                   ; 3025 (27)         ; 3541 (23)    ; 176256      ; 12           ; 12      ; 0         ; 49   ; 0            ; |FPGA_control                                                                                                                                                                                                                                                                                                                                      ;              ;
 ;    |ADC0_drive:ADC0_drive|                                                                                      ; 160 (64)          ; 112 (31)     ; 32768       ; 0            ; 0       ; 0         ; 0    ; 0            ; |FPGA_control|ADC0_drive:ADC0_drive                                                                                                                                                                                                                                                                                                                ;              ;
 ;       |ADC0_FIFO:ADC0_FIFO|                                                                                     ; 96 (0)            ; 81 (0)       ; 32768       ; 0            ; 0       ; 0         ; 0    ; 0            ; |FPGA_control|ADC0_drive:ADC0_drive|ADC0_FIFO:ADC0_FIFO                                                                                                                                                                                                                                                                                            ;              ;
 ;          |dcfifo:dcfifo_component|                                                                              ; 96 (0)            ; 81 (0)       ; 32768       ; 0            ; 0       ; 0         ; 0    ; 0            ; |FPGA_control|ADC0_drive:ADC0_drive|ADC0_FIFO:ADC0_FIFO|dcfifo:dcfifo_component                                                                                                                                                                                                                                                                    ;              ;
@@ -630,8 +630,8 @@ applicable agreement for further details.
 ;                      |cntr_tnb:rd_ptr_msb|                                                                      ; 2 (2)             ; 2 (2)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FPGA_control|FFT:FFT|asj_fft_sglstream_fft_130:asj_fft_sglstream_fft_130_inst|auk_dspip_avalon_streaming_sink_fft_130:auk_dsp_atlantic_sink_1|scfifo:\normal_fifo:fifo_eab_on:in_fifo|scfifo_0eh1:auto_generated|a_dpfifo_po81:dpfifo|cntr_tnb:rd_ptr_msb                                                                                         ;              ;
 ;                      |cntr_unb:wr_ptr|                                                                          ; 3 (3)             ; 3 (3)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FPGA_control|FFT:FFT|asj_fft_sglstream_fft_130:asj_fft_sglstream_fft_130_inst|auk_dspip_avalon_streaming_sink_fft_130:auk_dsp_atlantic_sink_1|scfifo:\normal_fifo:fifo_eab_on:in_fifo|scfifo_0eh1:auto_generated|a_dpfifo_po81:dpfifo|cntr_unb:wr_ptr                                                                                             ;              ;
 ;          |auk_dspip_avalon_streaming_source_fft_130:auk_dsp_atlantic_source_1|                                  ; 24 (24)           ; 50 (50)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FPGA_control|FFT:FFT|asj_fft_sglstream_fft_130:asj_fft_sglstream_fft_130_inst|auk_dspip_avalon_streaming_source_fft_130:auk_dsp_atlantic_source_1                                                                                                                                                                                                 ;              ;
-;    |sld_hub:auto_hub|                                                                                           ; 124 (1)           ; 86 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FPGA_control|sld_hub:auto_hub                                                                                                                                                                                                                                                                                                                     ;              ;
-;       |sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|                                                            ; 123 (85)          ; 86 (58)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FPGA_control|sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst                                                                                                                                                                                                                                                                        ;              ;
+;    |sld_hub:auto_hub|                                                                                           ; 123 (1)           ; 86 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FPGA_control|sld_hub:auto_hub                                                                                                                                                                                                                                                                                                                     ;              ;
+;       |sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|                                                            ; 122 (84)          ; 86 (58)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FPGA_control|sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst                                                                                                                                                                                                                                                                        ;              ;
 ;          |sld_rom_sr:hub_info_reg|                                                                              ; 21 (21)           ; 9 (9)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FPGA_control|sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|sld_rom_sr:hub_info_reg                                                                                                                                                                                                                                                ;              ;
 ;          |sld_shadow_jsm:shadow_jsm|                                                                            ; 17 (17)           ; 19 (19)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FPGA_control|sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|sld_shadow_jsm:shadow_jsm                                                                                                                                                                                                                                              ;              ;
 ;    |sld_signaltap:auto_signaltap_0|                                                                             ; 302 (1)           ; 479 (32)     ; 32768       ; 0            ; 0       ; 0         ; 0    ; 0            ; |FPGA_control|sld_signaltap:auto_signaltap_0                                                                                                                                                                                                                                                                                                       ;              ;
@@ -1295,7 +1295,7 @@ Encoding Type:  One-Hot
 ; 4:1                ; 5 bits    ; 10 LEs        ; 5 LEs                ; 5 LEs                  ; Yes        ; |FPGA_control|sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|mixer_addr_reg[4]                                                                                                ;
 ; 5:1                ; 5 bits    ; 15 LEs        ; 5 LEs                ; 10 LEs                 ; Yes        ; |FPGA_control|sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|sld_rom_sr:hub_info_reg|word_counter[0]                                                                          ;
 ; 6:1                ; 7 bits    ; 28 LEs        ; 7 LEs                ; 21 LEs                 ; Yes        ; |FPGA_control|sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|irsr_reg[2]                                                                                                      ;
-; 34:1               ; 4 bits    ; 88 LEs        ; 60 LEs               ; 28 LEs                 ; Yes        ; |FPGA_control|sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|design_hash_reg[3]                                                                                               ;
+; 34:1               ; 4 bits    ; 88 LEs        ; 52 LEs               ; 36 LEs                 ; Yes        ; |FPGA_control|sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|design_hash_reg[3]                                                                                               ;
 ; 20:1               ; 4 bits    ; 52 LEs        ; 36 LEs               ; 16 LEs                 ; Yes        ; |FPGA_control|sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|sld_rom_sr:hub_info_reg|WORD_SR[0]                                                                               ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
@@ -1807,7 +1807,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.0.0 Build 156 04/24/2013 SJ Full Version
-    Info: Processing started: Mon May 27 03:24:54 2024
+    Info: Processing started: Tue May 28 00:52:48 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off FPGA_control -c FPGA_control
 Info (20030): Parallel compilation is enabled and will use 16 of the 16 processors detected
 Info (12021): Found 1 design units, including 1 entities, in source file src/fpga_control.v
@@ -2449,16 +2449,16 @@ Info (286031): Timing-Driven Synthesis is running on partition "sld_hub:auto_hub
 Info (35024): Succesfully connected in-system debug instance "auto_signaltap_0" to all 33 required data inputs, trigger inputs, acquisition clocks, and dynamic pins
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 5037 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 5036 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 26 input pins
     Info (21059): Implemented 27 output pins
-    Info (21061): Implemented 4619 logic cells
+    Info (21061): Implemented 4618 logic cells
     Info (21064): Implemented 352 RAM segments
     Info (21062): Implemented 12 DSP elements
 Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 7 warnings
-    Info: Peak virtual memory: 4794 megabytes
-    Info: Processing ended: Mon May 27 03:25:18 2024
-    Info: Elapsed time: 00:00:24
-    Info: Total CPU time (on all processors): 00:00:17
+    Info: Peak virtual memory: 4786 megabytes
+    Info: Processing ended: Tue May 28 00:53:16 2024
+    Info: Elapsed time: 00:00:28
+    Info: Total CPU time (on all processors): 00:00:16
 
 
