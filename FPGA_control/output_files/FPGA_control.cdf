@@ -4,7 +4,7 @@ JedecChain;
 	DefaultMfr(6E);
 
 	P ActionCode(Cfg)
-		Device PartName(EP4CE10F17) Path("E:/Graduation Design/mutil-channel-oscilloscope/FPGA_control/output_files/") File("FPGA_control.sof") MfrSpec(OpMask(1));
+		Device PartName(EP4CE10) Path("E:/Graduation Design/mutil-channel-oscilloscope/FPGA_control/output_files/") File("FPGA_control.jic") MfrSpec(OpMask(1) SEC_Device(EPCS16) Child_OpMask(1 1));
 
 ChainEnd;
 

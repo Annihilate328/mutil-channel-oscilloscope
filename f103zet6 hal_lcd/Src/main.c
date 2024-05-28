@@ -153,7 +153,10 @@ int main(void)
 		LCD_DrawLine(180,0,180,480);
 		LCD_DrawLine(120,0,120,480);
 		LCD_DrawLine(60,0,60,480);
-		
+		if(Y==0) LCD_ShowString(620,420,240,24,24,"   1V");
+		else if(Y==1) LCD_ShowString(620,420,240,24,24,"500mV");
+		if(X==0) LCD_ShowString(620,450,240,24,24,"1.6nS");
+		else if(X==1) LCD_ShowString(620,450,240,24,24,"0.8nS");
 		HAL_GPIO_WritePin(GPIOC,GPIO_PIN_6,GPIO_PIN_RESET);
 		HAL_GPIO_WritePin(GPIOG,GPIO_PIN_8,GPIO_PIN_SET);
 		V1MAX=0;
@@ -198,6 +201,7 @@ int main(void)
 				if(y1==1) LCD_DrawLine(j-2,240+(FIFO01[j-1]-127)*3.76,j-1,240+(FIFO01[j]-127)*3.76);
 			}
 			j++;
+			if(j==601) break;
 		}
 		POINT_COLOR =GREEN;
 		V1MAX=(V1MAX-127)/1700;
@@ -260,21 +264,19 @@ int main(void)
 			FIFO00[j]=FIFO00[j]+HAL_GPIO_ReadPin(GPIOD, GPIO_PIN_13)*4;
 			FIFO00[j]=FIFO00[j]+HAL_GPIO_ReadPin(GPIOG, GPIO_PIN_2)*2;
 			FIFO00[j]=FIFO00[j]+HAL_GPIO_ReadPin(GPIOG, GPIO_PIN_3)*1;
-			if(j==601) break;
-			if(FIFO00[j]>V1MAX) V1MAX=FIFO00[j];
-			if(FIFO00[j]<V1MIN) V1MIN=FIFO00[j];
+			if(FIFO00[j]>V0MAX) V0MAX=FIFO00[j];
+			if(FIFO00[j]<V0MIN) V0MIN=FIFO00[j];
 			POINT_COLOR =RED;
 			if(j>=3){
 				if(y1==0) LCD_DrawLine(j-2,240+(FIFO00[j-1]-127)*1.88,j-1,240+(FIFO00[j]-127)*1.88);
 				if(y1==1) LCD_DrawLine(j-2,240+(FIFO00[j-1]-127)*3.76,j-1,240+(FIFO00[j]-127)*3.76);
 			}
 			j++;
+			if(j==601) break;
 		}
 		POINT_COLOR =RED;
 		V0MAX=(V0MAX-127)/1700;
 		V0MIN=(V0MIN-127)/1700;
-		LCD_ShowString(620,0,240,24,24,"Frequency:");
-		LCD_ShowString(620,30,240,24,24,"499.85KHz");
 		LCD_ShowString(620,60,240,24,24,"V+max:");
 		if(V0MAX<0) LCD_ShowString(620,90,240,24,24,"-");
 		for(i=0;i<6;i++){
